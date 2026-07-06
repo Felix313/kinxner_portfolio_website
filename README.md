@@ -1,83 +1,47 @@
-# My Portfolio Website
+# KInxner Consulting — Website
 
-Modern, fast, fully static personal portfolio you can host on GitHub Pages.
+Statische One-Pager-Website für die (fiktive) Boutique-Beratung **KInxner Consulting**:
+Künstliche Intelligenz & Data Engineering, mit einem Augenzwinkern.
+Gehostet auf GitHub Pages unter [kinxner-consulting.de](https://kinxner-consulting.de/).
 
-## ✨ Features (initial scaffold)
+## Design-System
 
-- Single-page layout (Hero, About, Skills, Projects, Contact)
-- Responsive design (mobile-first, flex/grid)
-- Theme toggle (light/dark stored in localStorage)
-- Accessible semantic HTML + skip link
-- Projects loaded from a JSON data file (easy to update)
-- Subtle entrance animations via Intersection Observer (no heavy libs)
-- Social / CTA buttons with keyboard focus styles
+| Token | Wert | Rolle |
+|---|---|---|
+| Tinte | `#101623` | Hero & Manifest-Band |
+| Porzellan | `#F3F4F7` | Grundfläche |
+| Kronen-Gold | `#C9971F` / `#E8B84B` | Brand-Akzent (Krone) |
+| Ultramarin | `#2E45E6` | das „KI"-Signal |
 
-## 🚀 Quick Start
+- **Signature-Element**: das „KI" in Wörtern wird ultramarin markiert (*K**I**nxner*, „Wir schreiben KI groß. Wörtlich.")
+- **Typografie**: Archivo (Display, breit), Inter (Body), IBM Plex Mono (Eyebrows/Kennzahlen)
+- **Hero**: interaktives Entscheidungsnetz-Canvas (Gold-Knoten, Ultramarin-Kanten), reagiert auf den Pointer
+- `prefers-reduced-motion` wird respektiert (statisches Canvas, keine Reveals)
 
-1. Clone the repo (or fork on GitHub):
-	 ```bash
-		git clone https://github.com/Felix313/my_portfolio_website.git
-	 cd my_portfolio_website
-	 ```
-2. Open `index.html` in your browser (double-click or use a local server).
-3. Edit the content inside the markup sections & `assets/data/projects.json`.
-4. Commit & push changes.
-
-## 🌐 Deploy to GitHub Pages
-
-1. On GitHub, go to Settings → Pages.
-2. Under "Build and deployment", choose: Source = `Deploy from a branch`.
-3. Select branch `main`, folder `/ (root)`, save.
-4. Wait ~1 minute; site appears at `https://Felix313.github.io/my_portfolio_website/`.
-5. (Optional) Custom domain: add `CNAME` file in root with your domain + configure DNS (A / ALIAS / CNAME records per GitHub docs).
-
-## 🛠 Customize
-
-Edit colors / spacing in `assets/css/style.css` under the `:root` section.
-Add/update projects in `assets/data/projects.json` (fields: title, description, tags, links).
-Update social links & meta tags inside `index.html` head & footer sections.
-
-## 📂 Structure
+## Struktur
 
 ```
-index.html
-assets/
-	css/style.css
-	js/main.js
-	data/projects.json
+index.html                  Ein-Seiten-Layout (Hero, Leistungen, Vorgehen, Manifest, Cases, Kontakt)
+assets/css/style.css        Design-Tokens + Styles
+assets/js/main.js           Canvas, Reveals, Count-ups, Nav, Projekt-Loader
+assets/data/projects.json   Cases (Felder: metric, title, description, tags)
 ```
 
-## ✅ Roadmap Ideas
+## Lokal starten
 
-- Add blog section (consider `/blog` folder or a static site generator later)
-- Add GitHub Actions workflow to run HTML/CSS lint & deploy
-- Add contact form via a serverless form service (e.g., Formspree / Netlify Forms)
-- Add Open Graph preview image & analytics (e.g., Plausible)
-
-## 🧪 Quick Local Dev Server (Optional)
-
-Use Python or Node to serve (avoids CORS for JSON on some browsers):
+`fetch()` der Projekte braucht HTTP (unter `file://` blockiert CORS die JSON):
 
 ```bash
 python -m http.server 8000
-```
-or
-```bash
-npx serve .
+# → http://localhost:8000
 ```
 
-Then browse: http://localhost:8000
+## Deploy
 
-## 🔒 Accessibility & Performance Tips
+GitHub Pages, Branch `main`, Root. Custom Domain via `CNAME`.
 
-- Keep heading hierarchy logical (h1 → h2 → h3)
-- Provide alt text for images / decorative images empty alt
-- Use compressed images (WebP / AVIF) placed in `assets/img`
-- Run Lighthouse in Chrome DevTools and iterate
+## Inhalte pflegen
 
-## 🤝 Contributing (Personal Repo)
-
-Primarily for your personal use, but feel free to open issues or PRs if you share this public.
-
----
-Happy building! Tweak, brand, and make it yours. 🎨
+- Cases: `assets/data/projects.json`
+- Farben/Typo: `:root`-Tokens in `assets/css/style.css`
+- Alles andere: direkt in `index.html`

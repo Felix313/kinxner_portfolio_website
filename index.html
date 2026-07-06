@@ -3,214 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kinxner Consulting | Data & AI Engineering</title>
-  <meta name="description" content="Kinxner Consulting – Boutique Beratung für Data & AI: Moderne Datenplattformen, dbt, Airflow, Process Mining & Journey Analytics seit 2023." />
+  <title>KInxner Consulting — Wir schreiben KI groß.</title>
+  <meta name="description" content="KInxner Consulting – Boutique-Beratung für Künstliche Intelligenz & Data Engineering. KI-Strategie, GenAI-Agenten, Datenplattformen, dbt, Process Mining. Wir schreiben KI groß. Wörtlich." />
   <link rel="canonical" href="https://kinxner-consulting.de/" />
-  <meta name="color-scheme" content="light dark" />
-  <!-- Open Graph Core -->
-  <meta property="og:site_name" content="Kinxner Consulting" />
+  <meta name="color-scheme" content="light" />
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="KInxner Consulting" />
   <meta property="og:url" content="https://kinxner-consulting.de/" />
-  <meta property="og:title" content="Kinxner Consulting – Data & AI" />
-  <meta property="og:description" content="Datenplattformen, Analytics Engineering (dbt), Airflow Orchestrierung, Process Mining & Journey Insights." />
+  <meta property="og:title" content="KInxner Consulting — Wir schreiben KI groß." />
+  <meta property="og:description" content="Künstliche Intelligenz mit belastbarem Datenfundament. Von der ersten Pipeline bis zur Vorstandsfolie." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://kinxner-consulting.de/og-image.png" />
-  <meta property="og:image:alt" content="Kinxner Consulting Logo mit Krone" />
-  <!-- Twitter Card -->
+  <meta property="og:image" content="https://kinxner-consulting.de/assets/img/logo.png" />
+  <meta property="og:image:alt" content="KInxner Consulting – goldene Krone" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kinxner Consulting – Data & AI" />
-  <meta name="twitter:description" content="Datenplattformen, dbt, Airflow, Process Mining, Journey Analytics." />
-  <meta name="twitter:image" content="https://kinxner-consulting.de/og-image.png" />
-  <!-- Optional: set your Twitter @handle -->
-  <meta name="twitter:site" content="@yourhandle" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Favicon / App Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
   <link rel="apple-touch-icon" href="assets/img/logo.png" />
   <script>document.documentElement.classList.add('js');</script>
-  <!-- Redundant old OG tags removed -->
 </head>
 <body>
-  <!-- Goldregen Canvas -->
-  <canvas id="goldRainCanvas" class="gold-rain" aria-hidden="true"></canvas>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header is-top" role="banner">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="#" class="brand" aria-label="Startseite"><span class="accent" style="margin-left:4px;">Kinxner Consulting</span></a>
-      <nav aria-label="Main" class="nav" id="nav">
-        <button class="nav__toggle" aria-controls="navList" aria-expanded="false" id="navToggle" aria-label="Menü öffnen" title="Menü">
+      <a href="#hero" class="brand" aria-label="KInxner Consulting – Startseite">
+        <svg class="brand__crown" viewBox="0 0 48 32" aria-hidden="true" focusable="false">
+          <path d="M4 26 L2 8 L13 16 L24 2 L35 16 L46 8 L44 26 Z" />
+          <rect x="4" y="28" width="40" height="3" rx="1.5" />
+        </svg>
+        <span class="brand__word"><em>KI</em>nxner<span class="brand__suffix"> Consulting</span></span>
+      </a>
+      <nav aria-label="Hauptnavigation" class="nav">
+        <button class="nav__toggle" aria-controls="navList" aria-expanded="false" id="navToggle" aria-label="Menü öffnen">
           <span class="burger" aria-hidden="true"></span>
         </button>
         <ul class="nav__list" id="navList">
-          <li><a href="#about">Über uns</a></li>
-          <li><a href="#skills">Kompetenzen</a></li>
-          <li><a href="#projects">Projekte</a></li>
-          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="#services">Leistungen</a></li>
+          <li><a href="#approach">Vorgehen</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#manifest">Manifest</a></li>
+          <li><a href="#contact" class="nav__cta">Erstgespräch</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <div class="hero-logo-wrapper">
-      <img src="assets/img/logo.png" id="heroLogo" class="hero-logo" alt="Kinxner Consulting" loading="lazy" />
-      <!-- Eingebettetes Video (wird per JS angezeigt) -->
-  <video id="heroVideo" class="hero-video" src="assets/vid/Kinxner_vid.mp4" preload="metadata" playsinline aria-hidden="true"></video>
-    </div>
-    <section class="hero hero--image" id="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" role="presentation" aria-hidden="true"></div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <canvas id="netCanvas" class="hero__canvas" aria-hidden="true"></canvas>
       <div class="container hero__inner">
-        <h1 id="hero-title">Data & AI, präsentiert auf umwerfenden Executive Slides.</h1>
-        <p class="lead">Wir bauen belastbare Datenfundamente und intelligente Automatisierung – schlank, testbar, nachvollziehbar. Von Rohdaten zu Entscheidungen: schneller Mehrwert statt endloser Projekte. Und das größte Highlight: wir können auch PowerPoint!</p>
-        <ul class="hero-highlights" role="list">
-          <li>Moderne Datenmodelle mit <strong>dbt</strong></li>
-          <li>Stabile Pipelines via <strong>Airflow</strong></li>
-          <li><strong>Process Mining</strong> für Durchsatz & Qualität</li>
-          <li><strong>Journey Analytics</strong> für Conversion & Retention</li>
-        </ul>
-        <div class="cta-group">
-          <a href="#approach" class="btn primary">Vorgehen</a>
-          <a href="#contact" class="btn secondary">Kontakt aufnehmen</a>
+        <p class="eyebrow hero__eyebrow reveal-seq">KInxner Consulting · Künstliche Intelligenz, königlich beraten</p>
+        <h1 id="hero-title" class="hero__title">
+          <span class="reveal-seq">Wir schreiben</span>
+          <span class="reveal-seq"><em class="ki">KI</em> groß.</span>
+          <span class="reveal-seq hero__title-punch">Wörtlich.</span>
+        </h1>
+        <p class="lead hero__lead reveal-seq">
+          Künstliche Intelligenz beeindruckt nur, wenn das Datenfundament trägt.
+          Wir bauen beides: produktive <em class="ki-inline">KI</em>-Systeme und die Plattform darunter —
+          testbar, nachvollziehbar, ohne Buzzword-Aufschlag.
+        </p>
+        <div class="cta-group reveal-seq">
+          <a href="#contact" class="btn btn--gold">Erstgespräch anfragen</a>
+          <a href="#approach" class="btn btn--ghost">Wie wir arbeiten</a>
         </div>
       </div>
+      <dl class="hero__stats container reveal-seq" aria-label="Kennzahlen mit Augenzwinkern">
+        <div class="stat">
+          <dt>weniger Bauchgefühl</dt>
+          <dd><span class="stat__num" data-count="97.3" data-decimals="1">0</span><span class="stat__unit">%</span></dd>
+        </div>
+        <div class="stat">
+          <dt>Folien pro Woche automatisiert</dt>
+          <dd><span class="stat__num" data-count="428">0</span></dd>
+        </div>
+        <div class="stat">
+          <dt>Buzzwords ohne Definition</dt>
+          <dd><span class="stat__num" data-count="0">0</span></dd>
+        </div>
+        <div class="stat">
+          <dt>Krone im Logo</dt>
+          <dd><span class="stat__num" data-count="1">0</span></dd>
+        </div>
+      </dl>
     </section>
 
-    <section id="about" class="section section--alt" aria-labelledby="about-title">
-      <div class="container two-col">
-        <div>
-          <h2 id="about-title">Warum Kinxner?</h2>
-          <p>Wir verbinden <strong>Analytics Engineering</strong>, <strong>Workflow Orchestrierung</strong>, <strong>Process Mining</strong> und <strong>Journey Analytics</strong> zu einem ganzheitlichen Data & AI Ansatz. Kein Over-Engineering, sondern pragmatische Architektur mit klaren Qualitätskriterien.</p>
-          <p>Unsere Leitprinzipien: <em>Value first</em>, Transparenz durch Tests & Dokumentation, Automatisierung wo sinnvoll, enge Zusammenarbeit mit Fachbereichen.</p>
-          <ul class="check-list" role="list">
-            <li>Saubere Datenmodelle &amp; Data Contracts</li>
-            <li>Skalierbare, qualitätsgesicherte Pipelines</li>
-            <li>Quantifizierte Prozessverbesserung</li>
-            <li>Verknüpfte Customer Journey KPIs</li>
-          </ul>
-        </div>
-        <div class="media-box">
-          <img src="assets\img\dashboard-viz.png" alt="Dashboard" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
+    <!-- ============ LEISTUNGEN ============ -->
     <section id="services" class="section" aria-labelledby="services-title">
       <div class="container">
-        <h2 id="services-title">Leistungsschwerpunkte</h2>
+        <p class="eyebrow reveal">Leistungen</p>
+        <h2 id="services-title" class="reveal">Von der <em class="ki-inline">KI</em>-Strategie bis zur Pipeline, die sie trägt.</h2>
         <div class="feature-grid">
-          <article class="feature">
-            <h3>Datenplattform & Architektur</h3>
-            <p>Cloud‑DWH, Schichtenmodell, Governance & Observability – skalierbar und kosteneffizient.</p>
-            <p class="feature-tags">Stack: BigQuery · Snowflake · Redshift</p>
+          <article class="feature reveal">
+            <h3>KI-Strategie &amp; Use-Case-Portfolio</h3>
+            <p>Wir trennen die Use Cases, die Wert schaffen, von denen, die nur gut klingen. Priorisiert nach Datenreife, Risiko und Business Impact.</p>
+            <p class="feature-tags">Assessment · Roadmap · Build-vs-Buy</p>
           </article>
-          <article class="feature">
-            <h3>Analytics Engineering (dbt)</h3>
-            <p>Modulare Modelle, Tests, Docs & Deployment-Pipelines für verlässliche Business Metriken.</p>
-            <p class="feature-tags">dbt Core · dbt Cloud · CI</p>
+          <article class="feature reveal">
+            <h3>GenAI &amp; Agentensysteme</h3>
+            <p>Produktive LLM-Anwendungen mit Evaluierung, Guardrails und Kostenkontrolle — vom Copilot bis zum autonomen Workflow-Agenten.</p>
+            <p class="feature-tags">LLMs · RAG · Agents · Evals</p>
           </article>
-          <article class="feature">
-            <h3>Airflow Orchestrierung</h3>
-            <p>Zuverlässige DAGs mit SLAs, Alerting & Wiederanlaufstrategien – weniger Feuerlöschen.</p>
-            <p class="feature-tags">Airflow · TaskFlow · Sensors</p>
+          <article class="feature reveal">
+            <h3>Datenplattform &amp; Architektur</h3>
+            <p>Cloud-DWH, Schichtenmodell, Governance und Observability — das Fundament, auf dem Modelle nicht umfallen.</p>
+            <p class="feature-tags">Snowflake · BigQuery · Data Contracts</p>
           </article>
-          <article class="feature">
+          <article class="feature reveal">
+            <h3>Analytics Engineering</h3>
+            <p>Modulare dbt-Modelle mit Tests, Dokumentation und CI — verlässliche Metriken statt zehn Wahrheiten pro Kennzahl.</p>
+            <p class="feature-tags">dbt · Slim CI · Semantic Layer</p>
+          </article>
+          <article class="feature reveal">
             <h3>Process Mining</h3>
-            <p>Event Logs extrahieren, Varianten sichtbar machen, Engpässe quantifizieren & beseitigen.</p>
-            <p class="feature-tags">Order-to-Cash · Lead-to-Customer</p>
+            <p>Event-Logs extrahieren, Varianten sichtbar machen, Engpässe quantifizieren — und mit KI-gestützter Ursachenanalyse beseitigen.</p>
+            <p class="feature-tags">Order-to-Cash · Journey Mining</p>
           </article>
-            <article class="feature">
-            <h3>Journey & Funnel Analytics</h3>
-            <p>User Flows, Drop-Off Analyse, Attribution – Priorisierung für Produkt & Marketing.</p>
-            <p class="feature-tags">Tracking Layer · Warehouse Events</p>
-          </article>
-          <article class="feature">
-            <h3>AI Foundations</h3>
-            <p>Datenqualität, Feature Layer, Evaluierung & Guardrails für generative & klassische Modelle.</p>
-            <p class="feature-tags">LLMs · Embeddings · MLOps Light</p>
+          <article class="feature reveal">
+            <h3>Decision Intelligence</h3>
+            <p>Funnel-, Journey- und Attributionsanalysen, die in Entscheidungen münden — inklusive der Vorstandsfolie dazu.</p>
+            <p class="feature-tags">Journey KPIs · Forecasting · Reporting</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="approach" class="section section--alt" aria-labelledby="approach-title">
+    <!-- ============ VORGEHEN ============ -->
+    <section id="approach" class="section section--tint" aria-labelledby="approach-title">
       <div class="container">
-        <h2 id="approach-title">Unser Vorgehen</h2>
+        <p class="eyebrow reveal">Vorgehen</p>
+        <h2 id="approach-title" class="reveal">Fünf Schritte. Keiner davon ist ein Workshop ohne Ergebnis.</h2>
         <ol class="approach-steps">
-          <li><strong>Discovery & Scope:</strong> Datenquellen, Pain Points, Quick Wins priorisieren (Workshops, KPI Canvas).</li>
-          <li><strong>Architektur & Baseline:</strong> Minimal tragfähige Plattform + erste dbt Modelle + orchestrierte Pipelines.</li>
-          <li><strong>Enablement & Qualitätslayer:</strong> Tests, Dokumentation, Observability, Handover Patterns.</li>
-          <li><strong>Scale & Automatisierung:</strong> Prozessoptimierung via Mining & Journey KPI Integration.</li>
-          <li><strong>AI Readiness:</strong> Feature Layer & Guardrails vorbereiten – produktive Experimente.</li>
+          <li class="reveal">
+            <span class="step-no">01</span>
+            <h3>Discovery &amp; Scope</h3>
+            <p>Datenquellen, Pain Points und Quick Wins in zwei Wochen priorisiert — mit KPI-Canvas statt Wunschliste.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-no">02</span>
+            <h3>Fundament</h3>
+            <p>Minimal tragfähige Plattform, erste dbt-Modelle, orchestrierte Pipelines. Ab Tag eins versioniert und getestet.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-no">03</span>
+            <h3>Qualitätslayer</h3>
+            <p>Tests, Data Contracts, Observability, Dokumentation — die unglamouröse Hälfte, die später alles rettet.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-no">04</span>
+            <h3><em class="ki-inline">KI</em> in Produktion</h3>
+            <p>Use Cases auf dem Fundament produktiv setzen: Evaluierung, Guardrails, Kostenmonitoring, Betrieb.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-no">05</span>
+            <h3>Enablement</h3>
+            <p>Ihr Team übernimmt. Handover-Patterns, Pairing, Playbooks — wir machen uns planmäßig überflüssig.</p>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section id="skills" class="section" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title">Kompetenzen</h2>
-        <ul class="skills" role="list">
-          <li>Analytics Engineering (dbt)</li>
-          <li>Workflow Orchestrierung (Apache Airflow)</li>
-          <li>Process Mining & KPI Discovery</li>
-          <li>Customer Journey & Funnel Analytics</li>
-          <li>Datenmodellierung (Dimensional / Data Vault Light)</li>
-          <li>Cloud DWH (BigQuery / Snowflake / Redshift)</li>
-          <li>SQL Performance & Tests</li>
-          <li>Python (ETL/ELT, Automatisierung)</li>
-          <li>Event Tracking / Product Analytics</li>
-          <li>Data Quality & Observability</li>
-        </ul>
+    <!-- ============ MANIFEST ============ -->
+    <section id="manifest" class="manifest" aria-labelledby="manifest-title">
+      <div class="container manifest__inner">
+        <p class="eyebrow eyebrow--dark reveal">Das <em class="ki-inline">KI</em>-Manifest, §1</p>
+        <blockquote class="reveal">
+          <p id="manifest-title">„Ein Modell ohne saubere Daten ist eine Meinung mit GPU."</p>
+        </blockquote>
+        <p class="manifest__note reveal">Deshalb beginnt bei uns jedes KI-Projekt im Data Engineering — und endet erst, wenn es im Betrieb läuft.</p>
       </div>
     </section>
 
-  <section id="projects" class="section" aria-labelledby="projects-title">
+    <!-- ============ CASES ============ -->
+    <section id="cases" class="section" aria-labelledby="cases-title">
       <div class="container">
-    <h2 id="projects-title">Projekte (Auswahl)</h2>
+        <p class="eyebrow reveal">Cases</p>
+        <h2 id="cases-title" class="reveal">Ausgewählte Projekte. Zahlen leicht gerundet, Stolz ungerundet.</h2>
         <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
         <template id="projectCardTemplate">
-          <article class="project-card">
-            <header>
-              <h3 class="project-title"></h3>
-            </header>
+          <article class="project-card reveal">
+            <p class="project-metric"></p>
+            <h3 class="project-title"></h3>
             <p class="project-desc"></p>
             <ul class="project-tags" role="list"></ul>
-            <div class="project-links"></div>
           </article>
         </template>
-        <p class="projects-fallback" id="projectsFallback" hidden>Weitere Referenzen auf Anfrage. 🌱</p>
+        <p class="projects-fallback" id="projectsFallback" hidden>Weitere Referenzen auf Anfrage — die NDA-Ordner sind gut gefüllt.</p>
       </div>
     </section>
 
-    <section id="cta" class="section cta-block" aria-labelledby="cta-title">
-      <div class="container cta-inner">
+    <!-- ============ KONTAKT ============ -->
+    <section id="contact" class="section section--tint" aria-labelledby="contact-title">
+      <div class="container contact__inner">
         <div>
-          <h2 id="cta-title">Das Potenzial Ihrer Daten – nur ein Gespräch entfernt</h2>
-          <p>In einem 30‑min Call klären wir Use Cases, Reifegrad & mögliche Quick Wins. Keine Folien‑Schlacht, sondern konkrete Optionen.</p>
-          <a href="#contact" class="btn primary">Gespräch anfragen</a>
+          <p class="eyebrow reveal">Kontakt</p>
+          <h2 id="contact-title" class="reveal">Das Potenzial Ihrer Daten ist ein Gespräch entfernt.</h2>
+          <p class="reveal">30 Minuten, keine Folienschlacht: Wir klären Use Cases, Datenreife und mögliche Quick Wins. Antwort innerhalb eines Werktags.</p>
+          <div class="cta-group reveal">
+            <a href="mailto:contact@kinxner-consulting.de" class="btn btn--gold">contact@kinxner-consulting.de</a>
+            <a href="https://www.linkedin.com/in/kinxner-consulting/" rel="noopener" target="_blank" class="btn btn--ghost-dark">LinkedIn</a>
+          </div>
         </div>
-        <img src="assets\img\contact_us.png" alt="Teamspirit" loading="lazy" class="cta-image" />
-      </div>
-    </section>
-
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title">Kontakt</h2>
-        <p>Kurzfrage, Sparringsbedarf oder Startprojekt? <strong>Wir antworten innerhalb eines Werktags.</strong></p>
-        <ul class="contact-list" role="list">
-          <li><a href="mailto:contact@kinxner-consulting.de">contact@kinxner-consulting.de</a></li>
-          <li><a href="https://www.linkedin.com/in/kinxner-consulting/" rel="noopener" target="_blank">LinkedIn</a></li>
-        </ul>
+        <div class="contact__card reveal" aria-hidden="true">
+          <svg class="contact__crown" viewBox="0 0 48 32" focusable="false">
+            <path d="M4 26 L2 8 L13 16 L24 2 L35 16 L46 8 L44 26 Z" />
+            <rect x="4" y="28" width="40" height="3" rx="1.5" />
+          </svg>
+          <p class="contact__card-line">Erstgespräch<br />30 min · unverbindlich · buzzwordfrei</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-  <p>&copy; <span id="year"></span> Kinxner Consulting. Daten. Klarheit. Wirkung.</p>
-      <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+      <p>&copy; <span id="year"></span> <em class="ki-inline">KI</em>nxner Consulting. Künstlich intelligent seit 2023.</p>
+      <p class="footer-egg">Und ja: Wir können auch PowerPoint.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Nach oben">↑</button>
     </div>
   </footer>
 

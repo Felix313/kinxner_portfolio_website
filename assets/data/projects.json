@@ -1,28 +1,26 @@
 [
   {
-    "title": "E2E Customer Journey Analysen via Process Mining",
-    "description": "Kombination klassischer Funnel Events mit Process-Mining-Event-Logs (Lead→Signup→Onboarding→Retention). Extraktion vereinheitlichter Case IDs aus CRM, Product Tracking & Billing. Discovery von Abbruchpfaden, KPI-Korrelationsanalyse (Cycle Time vs. Activation). Ergebnis: +11% schnellere Aktivierung und gezielte Reduktion von 3 friction steps durch UI & Messaging Anpassung.",
-    "tags": ["Process Mining", "Journey Analytics", "Activation", "Retention"],
-    "links": [
-      { "label": "Process Mining", "url": "https://en.wikipedia.org/wiki/Process_mining" },
-      { "label": "Journey KPIs", "url": "https://amplitude.com/blog/customer-journey-analytics" }
-    ]
+    "metric": "−80 % Reporting-Aufwand",
+    "title": "GenAI-Copilot für das Vorstandsreporting",
+    "description": "LLM-gestützter Copilot auf einem governed Semantic Layer: beantwortet Kennzahlenfragen in natürlicher Sprache, generiert Kommentierungen und — selbstverständlich — die Folien dazu. Mit Evaluierungs-Suite, Guardrails gegen Halluzinationen und Kostenmonitoring pro Anfrage.",
+    "tags": ["GenAI", "RAG", "Semantic Layer", "Evals"]
   },
   {
-    "title": "Modularer 360° Customer Experience Datamart mit dbt & Snowflake",
-    "description": "Greenfield Aufbau eines Customer-Experience-Datamarts: Quellnormalisierung (stg), Harmonisierung (core) und domänenspezifische Marts (cx_marts). Nutzung von dbt Tests (unique, not_null, relationships), Source Freshness Checks, Slim CI und Dokumentation (dbt docs). Implementierung von SCD2 Light für Profil-Merges, Macro-gestützte KPI-Definition (NPS, Churn Flags) und YAML Data Contracts. Ergebnis: Reduktion Time-to-Insight von Tagen auf Stunden & 35% weniger Ad-hoc SQL-Anfragen.",
-    "tags": ["dbt", "Snowflake", "Data Modeling", "CX"],
-    "links": [
-      { "label": "dbt Docs", "url": "https://docs.getdbt.com/" },
-      { "label": "Snowflake", "url": "https://www.snowflake.com/" }
-    ]
+    "metric": "Time-to-Insight: Tage → Stunden",
+    "title": "360°-Customer-Experience-Datamart mit dbt & Snowflake",
+    "description": "Greenfield-Aufbau: Quellnormalisierung, Harmonisierung und domänenspezifische Marts. dbt-Tests, Source-Freshness-Checks, Slim CI, YAML Data Contracts und SCD2-light für Profil-Merges. 35 % weniger Ad-hoc-SQL-Anfragen — die Fachbereiche finden ihre Zahlen jetzt selbst.",
+    "tags": ["dbt", "Snowflake", "Data Contracts", "CX"]
   },
-    {
-    "title": "Airflow Orchestrierung & SLAs (Subscription Plattform)",
-    "description": "Konzeption robuster DAGs für Ingestion, Transformation, Reverse ETL. Implementierung von SLA Miss Alerts, Task Grouping und Template Macros zur Reduktion von Boilerplate um 40%.",
-    "tags": ["Apache Airflow", "Orchestration", "Monitoring"],
-    "links": [
-      { "label": "Airflow", "url": "https://airflow.apache.org/" }
-    ]
+  {
+    "metric": "+11 % schnellere Aktivierung",
+    "title": "KI-gestütztes Journey Mining (Lead → Retention)",
+    "description": "Funnel-Events und Process-Mining-Event-Logs auf vereinheitlichte Case-IDs aus CRM, Product Tracking und Billing gebracht. ML-gestützte Ursachenanalyse identifizierte drei Friction Steps; UI- und Messaging-Anpassungen wurden per Uplift-Messung validiert.",
+    "tags": ["Process Mining", "Journey Analytics", "ML", "Activation"]
+  },
+  {
+    "metric": "−40 % Pipeline-Boilerplate",
+    "title": "Airflow-Orchestrierung mit SLAs (Subscription-Plattform)",
+    "description": "Robuste DAGs für Ingestion, Transformation und Reverse ETL. SLA-Miss-Alerts, Task Grouping und Template-Macros — seitdem klingelt das On-Call-Telefon deutlich seltener, und wenn, dann mit brauchbarer Fehlermeldung.",
+    "tags": ["Apache Airflow", "Orchestrierung", "Monitoring"]
   }
 ]
