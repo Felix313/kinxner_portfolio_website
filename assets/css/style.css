@@ -549,3 +549,42 @@ em.ki, em.ki-inline {
 @media (max-width: 520px) {
   .brand__suffix { display: none; }
 }
+
+/* ==========================================================================
+   Satire-Hinweis
+   Steht bewusst ueber dem Header und damit vor allem anderen: der
+   Aussenendruck soll die Absicht der Seite sofort eindeutig machen.
+   ========================================================================== */
+
+.satire-bar {
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-bottom: 2px solid var(--ink);
+}
+
+.satire-bar p {
+  margin: 0;
+  padding-block: 0.7rem;
+}
+
+.satire-bar strong {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 118;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.satire-bar a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.satire-bar a:hover { color: var(--ultra); }
+
+@media (max-width: 640px) {
+  .satire-bar { font-size: 0.82rem; }
+}
