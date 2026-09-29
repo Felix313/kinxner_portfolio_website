@@ -1,7 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 40" role="img" aria-label="KInxner-Krone">
-  <path fill="#1925AA" d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z"/>
-  <circle cx="3" cy="12" r="2.6" fill="#1925AA"/>
-  <circle cx="45" cy="12" r="2.6" fill="#1925AA"/>
-  <circle cx="24" cy="6" r="2.6" fill="#C9971F"/>
-  <rect x="6" y="34" width="36" height="4" fill="#1925AA"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#EDC25C"/>
+      <stop offset="0.55" stop-color="#C9971F"/>
+      <stop offset="1" stop-color="#A87A12"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)">
+    <path d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z"/>
+    <circle cx="3" cy="12" r="2.6"/>
+    <circle cx="45" cy="12" r="2.6"/>
+    <circle cx="24" cy="6" r="2.6"/>
+    <rect x="6" y="34" width="36" height="4"/>
+  </g>
 </svg>

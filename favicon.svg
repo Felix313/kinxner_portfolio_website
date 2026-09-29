@@ -1,10 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#E8E6E0"/>
-  <g transform="translate(6 10) scale(1.083)">
-    <path fill="#1925AA" d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z"/>
-    <circle cx="3" cy="12" r="3" fill="#1925AA"/>
-    <circle cx="45" cy="12" r="3" fill="#1925AA"/>
-    <circle cx="24" cy="6" r="3" fill="#C9971F"/>
-    <rect x="6" y="34" width="36" height="4.5" fill="#1925AA"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F3CD6A"/>
+      <stop offset="0.55" stop-color="#D9A62C"/>
+      <stop offset="1" stop-color="#B8860F"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#1925AA"/>
+  <g transform="translate(6 10) scale(1.083)" fill="url(#g)">
+    <path d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z"/>
+    <circle cx="3" cy="12" r="3"/>
+    <circle cx="45" cy="12" r="3"/>
+    <circle cx="24" cy="6" r="3"/>
+    <rect x="6" y="34" width="36" height="4.5"/>
   </g>
 </svg>

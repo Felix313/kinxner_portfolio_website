@@ -18,7 +18,7 @@ Grundlage: `prompts/redesign.md`. Hier steht kurz, was entschieden wurde und war
 | Thema | Entscheidung | Warum |
 |---|---|---|
 | Farbe | Ultramarin `#1925AA` auf Porzellan `#E8E6E0`, Abstufung `#DFDCD4` für Wechselsektionen | Duoton der Referenz; Ultramarin war schon das „KI"-Signal |
-| Gold | Nur noch das Juwel der Krone (`#C9971F`) | Ein Akzent, der auffällt, weil er allein ist |
+| Gold | Die Krone ist wieder ganz golden (Verlauf `#EDC25C` → `#C9971F` → `#A87A12`). Dazu kommen der Satire-Balken, eine Akzentlinie an jeder Sektion, „Wörtlich.", Gold auf Blau (Manifest, Menü, Hover) und vergoldete Hover-Zustände | Nach Feedback: Das Gold hat KInxner ausgemacht. Auf Papier steht Gold nur als Fläche, Linie oder große Schrift (`#A07010`, 3,5:1). Kleine Schrift auf Papier bleibt blau |
 | KI-Signatur | „KI" als invertiertes Kästchen im Wort | In einem Duoton trägt Farbe allein nicht mehr; das Kästchen funktioniert auf Papier und auf Blau |
 | Schrift | Geist + Geist Mono (SIL OFL), selbst gehostet | Die Schriften der Referenz sind unbekannt. Gesucht war eine sachliche Grotesk mit Mono-Schwester für die Bemaßung. Selbst gehostet heißt: keine Verbindung zu Google |
 | Raster | 12 Spalten, als Haarlinien sichtbar; Hero als Millimeterpapier | Die Seite als Bauplan einer Beratung |

@@ -80,6 +80,11 @@
   <!-- Die Krone, einmal definiert. Konstruktion: docs/redesign/crown.md -->
   <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
     <defs>
+      <linearGradient id="crown-gold" x1="0" y1="0" x2="0.35" y2="1">
+        <stop offset="0" stop-color="#EDC25C" />
+        <stop offset="0.55" stop-color="#C9971F" />
+        <stop offset="1" stop-color="#A87A12" />
+      </linearGradient>
       <g id="crown-mark">
         <path d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z" />
         <circle cx="3" cy="12" r="2.6" />
@@ -106,7 +111,7 @@
         <h1 id="hero-title" class="hero__title">
           <span class="line"><span>Wir schreiben</span></span>
           <span class="line"><span><span class="ki">KI</span> groß.</span></span>
-          <span class="line"><span>Wörtlich.</span></span>
+          <span class="line"><span class="gold">Wörtlich.</span></span>
         </h1>
 
         <div class="hero__grid">
@@ -153,8 +158,8 @@
               <g class="bp-labels">
                 <text x="300" y="522" text-anchor="middle">Breite: skaliert mit dem Tagessatz (0 €)</text>
                 <text x="596" y="247" transform="rotate(90 596 247)" text-anchor="middle">Zackenhöhe: nicht verhandelbar</text>
-                <text x="184" y="46" text-anchor="end">Juwel: Gold.</text>
-                <text x="184" y="64" text-anchor="end" class="bp-minor">Einziger Farbakzent.</text>
+                <text x="184" y="46" text-anchor="end">Material: Blattgold.</text>
+                <text x="184" y="64" text-anchor="end" class="bp-minor">Aus Prinzip.</text>
                 <text x="12" y="444">Fundament:</text>
                 <text x="12" y="462">Data Engineering</text>
                 <text x="12" y="318" class="bp-minor">∠ 38°,</text>
@@ -345,7 +350,7 @@
       <div class="wrap manifest__inner">
         <p class="label reveal">§ 05 — Das <span class="ki">KI</span>-Manifest, §1</p>
         <blockquote class="reveal">
-          <p id="manifest-title">„Ein Modell ohne saubere Daten ist eine Meinung mit GPU."</p>
+          <p id="manifest-title"><span class="q">„</span>Ein Modell ohne saubere Daten ist eine Meinung mit GPU.<span class="q">“</span></p>
         </blockquote>
         <p class="manifest__note reveal">Deshalb beginnt bei uns jedes <span class="ki">KI</span>-Projekt im Data Engineering — und endet erst, wenn es im Betrieb läuft. Das Manifest hat nur einen Paragrafen. Mehr passte nicht auf die Folie.</p>
       </div>
@@ -440,7 +445,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="footer-mark" aria-hidden="true"><span class="ki">KI</span>nxner</p>
+      <p class="footer-mark" aria-hidden="true"><svg class="crown footer-crown" viewBox="0 0 48 40" focusable="false"><use href="#crown-mark" /></svg><span class="ki">KI</span>nxner</p>
       <div class="footer-row">
         <p>&copy; <span id="year">2026</span> <span class="ki">KI</span>nxner Consulting — ein Satireprojekt. Kein Unternehmen, keine Leistungen, keine echten Projekte.</p>
         <p class="footer-egg">Und ja: Wir können auch PowerPoint. Nur eben nicht für Geld.</p>

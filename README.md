@@ -6,7 +6,7 @@ Gehostet auf GitHub Pages unter [kinxner-consulting.de](https://kinxner-consulti
 
 ## Design-System
 
-Die Seite ist als Blaupause einer Beratung gestaltet: Duoton, sichtbares Raster, bemaßte Krone.
+Die Seite ist als Blaupause einer Beratung gestaltet: Ultramarin auf Papier, Gold für die Krone und ihre Akzente, sichtbares Raster, bemaßte Krone.
 Hintergründe und Entscheidungen stehen in `docs/redesign/`.
 
 | Token | Wert | Rolle |
@@ -14,7 +14,9 @@ Hintergründe und Entscheidungen stehen in `docs/redesign/`.
 | `--blue` Ultramarin | `#1925AA` | Text, Linien, Flächen — die eine Farbe |
 | `--paper` Porzellan | `#E8E6E0` | Grundfläche |
 | `--paper-2` | `#DFDCD4` | Wechselsektionen (PowerPoint, Was soll das?) |
-| `--gold` Kronen-Gold | `#C9971F` | ausschließlich das mittlere Juwel der Krone |
+| `--gold` Kronen-Gold | `#C9971F` | Krone, Satire-Balken, Akzentlinien, vergoldete Hover-Zustände |
+| `--gold-bright` | `#E8B84B` | Gold auf blauen Flächen (Manifest, Menü) |
+| `--gold-deep` | `#A07010` | Gold für große Schrift auf Papier („Wörtlich.") |
 
 - **KI-Signatur:** „KI" steht im Wort als invertiertes Kästchen (`<span class="ki">KI</span>`)
 - **Typografie:** Geist (Display und Text) und Geist Mono (Beschriftung, Bemaßung), beide selbst gehostet (SIL OFL, `assets/fonts/`)

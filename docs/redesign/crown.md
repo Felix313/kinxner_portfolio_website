@@ -10,7 +10,7 @@ Raster 48 × 40 Einheiten.
 |---|---|
 | Körper | Polygon `(6,31) (3,12) (15,21.5) (24,6) (33,21.5) (45,12) (42,31)` |
 | Zacken | drei Spitzen: außen auf y = 12, Mitte auf y = 6; die Täler liegen auf y = 21.5 |
-| Juwelen | Kreise r = 2.6 auf den drei Spitzen; das mittlere ist gold, die äußeren blau |
+| Juwelen | Kreise r = 2.6 auf den drei Spitzen |
 | Fundament | Rechteck `x 6, y 34, 36 × 4`, getrennt durch eine Fuge von 3 Einheiten |
 
 Die Blaupause im Hero ist dieselbe Geometrie im Maßstab 10:1 (Versatz 60/40). Ihre Bemaßung ist satirisch: „Zackenhöhe: nicht verhandelbar", „Breite: skaliert mit dem Tagessatz (0 €)", „Fundament: Data Engineering".
@@ -23,4 +23,4 @@ Die Blaupause im Hero ist dieselbe Geometrie im Maßstab 10:1 (Versatz 60/40). I
 
 ## Farbe
 
-Blau auf Papier. Gold nur für das mittlere Juwel, sonst nirgends auf der Seite. Auf blauem Grund (Ticket, Menü) ist die Krone papierfarben, das Juwel bleibt gold.
+Ganz in Gold, mit einem leichten Metallverlauf (`#EDC25C` → `#C9971F` → `#A87A12`, Gradient `#crown-gold`). Die Blaupause im Hero zeichnet sich in blauen Linien und wird danach vergoldet. Das Favicon zeigt die goldene Krone auf einem blauen Quadrat.
