@@ -1,35 +1,43 @@
 # KInxner Consulting — Website
 
-Statische One-Pager-Website für die (fiktive) Boutique-Beratung **KInxner Consulting**:
-Künstliche Intelligenz & Data Engineering, mit einem Augenzwinkern.
+Satirischer One-Pager einer KI-Beratung, die es nicht gibt: **KInxner Consulting**.
+Kein Unternehmen, keine Leistungen, alle Cases und Kennzahlen erfunden.
 Gehostet auf GitHub Pages unter [kinxner-consulting.de](https://kinxner-consulting.de/).
 
 ## Design-System
 
+Die Seite ist als Blaupause einer Beratung gestaltet: Duoton, sichtbares Raster, bemaßte Krone.
+Hintergründe und Entscheidungen stehen in `docs/redesign/`.
+
 | Token | Wert | Rolle |
 |---|---|---|
-| Tinte | `#101623` | Hero & Manifest-Band |
-| Porzellan | `#F3F4F7` | Grundfläche |
-| Kronen-Gold | `#C9971F` / `#E8B84B` | Brand-Akzent (Krone) |
-| Ultramarin | `#2E45E6` | das „KI"-Signal |
+| `--blue` Ultramarin | `#1925AA` | Text, Linien, Flächen — die eine Farbe |
+| `--paper` Porzellan | `#E8E6E0` | Grundfläche |
+| `--paper-2` | `#DFDCD4` | Wechselsektionen (PowerPoint, Was soll das?) |
+| `--gold` Kronen-Gold | `#C9971F` | ausschließlich das mittlere Juwel der Krone |
 
-- **Signature-Element**: das „KI" in Wörtern wird ultramarin markiert (*K**I**nxner*, „Wir schreiben KI groß. Wörtlich.")
-- **Typografie**: Archivo (Display, breit), Inter (Body), IBM Plex Mono (Eyebrows/Kennzahlen)
-- **Hero**: interaktives Entscheidungsnetz-Canvas (Gold-Knoten, Ultramarin-Kanten), reagiert auf den Pointer
-- `prefers-reduced-motion` wird respektiert (statisches Canvas, keine Reveals)
+- **KI-Signatur:** „KI" steht im Wort als invertiertes Kästchen (`<span class="ki">KI</span>`)
+- **Typografie:** Geist (Display und Text) und Geist Mono (Beschriftung, Bemaßung), beide selbst gehostet (SIL OFL, `assets/fonts/`)
+- **Raster:** 12 Spalten, als Haarlinien sichtbar
+- **Krone:** `assets/img/crown.svg`; Konstruktion in `docs/redesign/crown.md`
+- **Bewegung:** Die Krone zeichnet sich im Intro und fliegt ins Logo. Der Hero ist eine WebGL-Lupe auf Millimeterpapier. Alles respektiert `prefers-reduced-motion`.
 
 ## Struktur
 
 ```
-index.html                  Ein-Seiten-Layout (Hero, Leistungen, Vorgehen, Manifest, Cases, Kontakt)
-assets/css/style.css        Design-Tokens + Styles
-assets/js/main.js           Canvas, Reveals, Count-ups, Nav, Projekt-Loader
+index.html                  One-Pager: Hero, Leistungen, PowerPoint, Vorgehen, Manifest, Cases, FAQ, Was soll das?
+datenschutz.html            Datenschutzerklärung
+favicon.svg                 Favicon (PNG-Fallbacks in assets/img/)
+assets/css/style.css        Tokens + Styles
+assets/js/main.js           Intro, Menü, Reveals, Kennzahlen, Foliensatz, Cases-Loader, WebGL-Raster
 assets/data/projects.json   Cases (Felder: metric, title, description, tags)
+assets/fonts/               Geist, Geist Mono, Lizenz
+assets/img/                 Krone, Favicons, OG-Bild
 ```
 
 ## Lokal starten
 
-`fetch()` der Projekte braucht HTTP (unter `file://` blockiert CORS die JSON):
+`fetch()` der Cases braucht HTTP (unter `file://` blockiert der Browser das JSON):
 
 ```bash
 python -m http.server 8000
@@ -38,10 +46,11 @@ python -m http.server 8000
 
 ## Deploy
 
-GitHub Pages, Branch `main`, Root. Custom Domain via `CNAME`.
+GitHub Pages, Branch `main`, Root. Custom Domain via `CNAME`. Alles, was auf `main` landet, ist sofort live.
 
 ## Inhalte pflegen
 
-- Cases: `assets/data/projects.json`
+- Cases: `assets/data/projects.json` („KI" in Titeln wird automatisch markiert)
 - Farben/Typo: `:root`-Tokens in `assets/css/style.css`
 - Alles andere: direkt in `index.html`
+- Datenschutz: Die Seite setzt keine Cookies, nutzt keinen Web Storage und lädt nichts von Dritten. Das muss so bleiben, sonst stimmt `datenschutz.html` nicht mehr.
