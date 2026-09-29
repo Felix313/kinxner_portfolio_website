@@ -12,168 +12,332 @@
        Authorized Domain. Nicht entfernen. -->
   <meta name="google-site-verification" content="37TVtqb3Z6b---uzSy0M3xMzxqpeBndF286Ku5GI4yU" />
   <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#E8E6E0" />
   <!-- Open Graph -->
   <meta property="og:site_name" content="KInxner Consulting" />
   <meta property="og:url" content="https://kinxner-consulting.de/" />
   <meta property="og:title" content="KInxner Consulting — Satire. Eine Beratung, die es nicht gibt." />
   <meta property="og:description" content="Ein Spaßprojekt: Beratungssprache bis zum Anschlag, ohne Beratung dahinter. Kein Unternehmen, keine Leistungen, alle Projekte erfunden." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://kinxner-consulting.de/assets/img/logo.png" />
-  <meta property="og:image:alt" content="KInxner Consulting – goldene Krone" />
+  <meta property="og:image" content="https://kinxner-consulting.de/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="KInxner Consulting – Krone als Blaupause, mit dem Hinweis: Satire, eine Beratung, die es nicht gibt" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
-  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-  <div class="satire-bar" role="note">
-    <p class="container">
-      <strong>Satire.</strong> Diese Seite ist ein Spaßprojekt und kein Unternehmen.
-      Es werden keine Leistungen angeboten, alle Projekte und Kennzahlen sind frei erfunden.
+  <!-- Satire-Hinweis: steht bewusst vor allem anderen und liegt auch über dem Intro. -->
+  <aside class="satire-bar" aria-label="Satire-Hinweis">
+    <p class="wrap">
+      <strong>Satire.</strong>
+      <span>Diese Seite ist ein Spaßprojekt und kein Unternehmen. Es werden keine Leistungen angeboten, alle Projekte und Kennzahlen sind frei erfunden.</span>
       <a href="#was-soll-das">Was soll das?</a>
     </p>
-  </div>
+  </aside>
 
   <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="#hero" class="brand" aria-label="KInxner Consulting – Startseite">
-        <svg class="brand__crown" viewBox="0 0 48 32" aria-hidden="true" focusable="false">
-          <path d="M4 26 L2 8 L13 16 L24 2 L35 16 L46 8 L44 26 Z" />
-          <rect x="4" y="28" width="40" height="3" rx="1.5" />
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="KInxner Consulting – Startseite">
+        <svg class="crown brand__crown" id="brandCrown" viewBox="0 0 48 40" aria-hidden="true" focusable="false">
+          <use href="#crown-mark" />
         </svg>
-        <span class="brand__word"><em>KI</em>nxner<span class="brand__suffix"> Consulting</span></span>
+        <span class="brand__word"><span class="ki">KI</span>nxner</span>
       </a>
-      <nav aria-label="Hauptnavigation" class="nav">
-        <button class="nav__toggle" aria-controls="navList" aria-expanded="false" id="navToggle" aria-label="Menü öffnen">
-          <span class="burger" aria-hidden="true"></span>
+      <p class="header-index" aria-hidden="true"><span id="sectionIndex">§ 01</span> <span id="sectionName">Start</span></p>
+      <div class="header-actions">
+        <a href="#was-soll-das" class="pill">Was soll das?</a>
+        <button class="menu-btn" id="menuBtn" aria-controls="menuPanel" aria-expanded="false">
+          <span class="menu-btn__label">Menü</span>
+          <span class="menu-btn__icon" aria-hidden="true"></span>
         </button>
-        <ul class="nav__list" id="navList">
-          <li><a href="#services">Leistungen</a></li>
-          <li><a href="#approach">Vorgehen</a></li>
-          <li><a href="#cases">Cases</a></li>
-          <li><a href="#manifest">Manifest</a></li>
-          <li><a href="#was-soll-das" class="nav__cta">Was soll das?</a></li>
-        </ul>
-      </nav>
+      </div>
     </div>
   </header>
 
+  <nav class="menu" id="menuPanel" aria-label="Hauptnavigation" hidden>
+    <div class="menu__inner">
+      <p class="label menu__label">Inhaltsverzeichnis <span>· 7 Blätter, 0 Angebote</span></p>
+      <ol class="menu__list">
+        <li><a href="#services"><span class="menu__no">02</span>Leistungen</a></li>
+        <li><a href="#powerpoint"><span class="menu__no">03</span>PowerPoint</a></li>
+        <li><a href="#approach"><span class="menu__no">04</span>Vorgehen</a></li>
+        <li><a href="#manifest"><span class="menu__no">05</span>Manifest</a></li>
+        <li><a href="#cases"><span class="menu__no">06</span>Cases</a></li>
+        <li><a href="#was-soll-das"><span class="menu__no">07</span>Was soll das?</a></li>
+      </ol>
+      <p class="menu__foot label">contact@kinxner-consulting.de — Angebote gibt es keine.</p>
+    </div>
+  </nav>
+
+  <!-- Die Krone, einmal definiert. Konstruktion: docs/redesign/crown.md -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="crown-gold" x1="0" y1="0" x2="0.35" y2="1">
+        <stop offset="0" stop-color="#EDC25C" />
+        <stop offset="0.55" stop-color="#C9971F" />
+        <stop offset="1" stop-color="#A87A12" />
+      </linearGradient>
+      <g id="crown-mark">
+        <path d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z" />
+        <circle cx="3" cy="12" r="2.6" />
+        <circle cx="45" cy="12" r="2.6" />
+        <circle class="crown__jewel" cx="24" cy="6" r="2.6" />
+        <rect x="6" y="34" width="36" height="4" />
+      </g>
+    </defs>
+  </svg>
+
   <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <canvas id="netCanvas" class="hero__canvas" aria-hidden="true"></canvas>
-      <div class="container hero__inner">
-        <p class="eyebrow hero__eyebrow reveal-seq">Satire · Eine KI-Beratung, die es nicht gibt</p>
+    <!-- ============ 01 HERO ============ -->
+    <section class="hero" id="top" data-index="01" data-name="Start" aria-labelledby="hero-title">
+      <canvas class="hero__gl" id="heroGl" aria-hidden="true"></canvas>
+      <div class="wrap hero__inner">
+        <div class="sheet-meta" aria-hidden="true">
+          <span>KInxner Consulting</span>
+          <span>Blatt 01 / 07</span>
+          <span>Maßstab 1 : 1</span>
+          <span>Stand: nie verbindlich</span>
+        </div>
+
         <h1 id="hero-title" class="hero__title">
-          <span class="reveal-seq">Wir schreiben</span>
-          <span class="reveal-seq"><em class="ki">KI</em> groß.</span>
-          <span class="reveal-seq hero__title-punch">Wörtlich.</span>
+          <span class="line"><span>Wir schreiben</span></span>
+          <span class="line"><span><span class="ki">KI</span> groß.</span></span>
+          <span class="line"><span class="gold">Wörtlich.</span></span>
         </h1>
-        <p class="lead hero__lead reveal-seq">
-          Künstliche Intelligenz beeindruckt nur, wenn das Datenfundament trägt.
-          Wir bauen beides: produktive <em class="ki-inline">KI</em>-Systeme und die Plattform darunter —
-          testbar, nachvollziehbar, ohne Buzzword-Aufschlag.
-        </p>
-        <div class="cta-group reveal-seq">
-          <a href="#was-soll-das" class="btn btn--gold">Was soll das hier?</a>
-          <a href="#services" class="btn btn--ghost">Zum Unfug</a>
+
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="label">Satire · Eine <span class="ki">KI</span>-Beratung, die es nicht gibt</p>
+            <p class="lead">
+              Künstliche Intelligenz beeindruckt nur, wenn das Datenfundament trägt.
+              Wir bauen beides: produktive <span class="ki">KI</span>-Systeme und die Plattform darunter —
+              testbar, nachvollziehbar, ohne Buzzword-Aufschlag.
+            </p>
+            <div class="cta-group">
+              <a href="#was-soll-das" class="btn btn--solid">Was soll das hier? <span aria-hidden="true">→</span></a>
+              <a href="#services" class="btn btn--line">Zum Unfug</a>
+            </div>
+          </div>
+
+          <figure class="blueprint" aria-labelledby="bp-caption">
+            <svg class="blueprint__svg" viewBox="0 0 640 632" role="img" aria-labelledby="bp-title">
+              <title id="bp-title">Konstruktionszeichnung der KInxner-Krone mit Bemaßung</title>
+              <g class="bp-grid" aria-hidden="true">
+                <path d="M0 60H640M0 120H640M0 180H640M0 240H640M0 300H640M0 360H640M0 420H640M0 480H640M0 540H640M60 0V600M120 0V600M180 0V600M240 0V600M300 0V600M360 0V600M420 0V600M480 0V600M540 0V600M600 0V600" />
+              </g>
+              <g class="bp-construct" aria-hidden="true">
+                <circle cx="300" cy="100" r="44" pathLength="1" />
+                <circle cx="90" cy="160" r="44" pathLength="1" />
+                <circle cx="510" cy="160" r="44" pathLength="1" />
+                <path d="M90 160 300 100 510 160" pathLength="1" />
+                <path d="M300 40V530" pathLength="1" />
+              </g>
+              <g class="bp-crown">
+                <path class="bp-body" d="M120 350 90 160l120 95 90-155 90 155 120-95-30 190Z" pathLength="1" />
+                <circle cx="90" cy="160" r="26" pathLength="1" />
+                <circle cx="510" cy="160" r="26" pathLength="1" />
+                <circle class="bp-jewel" cx="300" cy="100" r="26" pathLength="1" />
+                <rect x="120" y="380" width="360" height="40" pathLength="1" />
+              </g>
+              <g class="bp-dims" aria-hidden="true">
+                <path d="M120 480V498M480 480V498M120 490H480M114 496l12-12M474 496l12-12" />
+                <path d="M566 74V420M556 74H576M556 420H576M560 80l12-12M560 426l12-12" />
+                <path d="M274 100H210L190 76" />
+                <path d="M120 400H80L62 424" />
+                <path d="M90 186V232Q126 238 146 204M90 232 60 296" />
+              </g>
+              <g class="bp-labels">
+                <text x="300" y="522" text-anchor="middle">Breite: skaliert mit dem Tagessatz (0 €)</text>
+                <text x="596" y="247" transform="rotate(90 596 247)" text-anchor="middle">Zackenhöhe: nicht verhandelbar</text>
+                <text x="184" y="46" text-anchor="end">Material: Blattgold.</text>
+                <text x="184" y="64" text-anchor="end" class="bp-minor">Aus Prinzip.</text>
+                <text x="12" y="444">Fundament:</text>
+                <text x="12" y="462">Data Engineering</text>
+                <text x="12" y="318" class="bp-minor">∠ 38°,</text>
+                <text x="12" y="336" class="bp-minor">strategisch</text>
+              </g>
+              <g class="bp-titleblock" aria-hidden="true">
+                <path d="M396 540H630V628H396ZM396 562H630M396 584H630M396 606H630" />
+                <text x="404" y="556">Objekt: Krone, 1 Stück</text>
+                <text x="404" y="578">Gezeichnet: KI · Blatt 01</text>
+                <text x="404" y="600">Geprüft: niemand</text>
+                <text x="404" y="622">Maßstab: 1 : 1 Ego</text>
+              </g>
+            </svg>
+            <figcaption id="bp-caption" class="label">Abb. 01 — Die Krone. Konstruiert auf einem 48er-Raster, bemaßt nach Gefühl.</figcaption>
+          </figure>
         </div>
+
+        <dl class="stats" aria-label="Frei erfundene Kennzahlen">
+          <div class="stat">
+            <dt>weniger Bauchgefühl</dt>
+            <dd><span class="stat__num" data-count="97.3" data-decimals="1">97,3</span><span class="stat__unit">%</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Folien pro Woche automatisiert</dt>
+            <dd><span class="stat__num" data-count="428">428</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Buzzwords ohne Definition</dt>
+            <dd><span class="stat__num" data-count="0">0</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Krone im Logo</dt>
+            <dd><span class="stat__num" data-count="1">1</span></dd>
+          </div>
+        </dl>
       </div>
-      <dl class="hero__stats container reveal-seq" aria-label="Frei erfundene Kennzahlen">
-        <div class="stat">
-          <dt>weniger Bauchgefühl</dt>
-          <dd><span class="stat__num" data-count="97.3" data-decimals="1">0</span><span class="stat__unit">%</span></dd>
-        </div>
-        <div class="stat">
-          <dt>Folien pro Woche automatisiert</dt>
-          <dd><span class="stat__num" data-count="428">0</span></dd>
-        </div>
-        <div class="stat">
-          <dt>Buzzwords ohne Definition</dt>
-          <dd><span class="stat__num" data-count="0">0</span></dd>
-        </div>
-        <div class="stat">
-          <dt>Krone im Logo</dt>
-          <dd><span class="stat__num" data-count="1">0</span></dd>
-        </div>
-      </dl>
     </section>
 
-    <!-- ============ LEISTUNGEN ============ -->
-    <section id="services" class="section" aria-labelledby="services-title">
-      <div class="container">
-        <p class="eyebrow reveal">Leistungen</p>
-        <h2 id="services-title" class="reveal">Von der <em class="ki-inline">KI</em>-Strategie bis zur Pipeline, die sie trägt.</h2>
-        <div class="feature-grid">
-          <article class="feature reveal">
-            <h3>KI-Strategie &amp; Use-Case-Portfolio</h3>
-            <p>Wir trennen die Use Cases, die Wert schaffen, von denen, die nur gut klingen. Priorisiert nach Datenreife, Risiko und Business Impact.</p>
-            <p class="feature-tags">Assessment · Roadmap · Build-vs-Buy</p>
-          </article>
-          <article class="feature reveal">
-            <h3>GenAI &amp; Agentensysteme</h3>
-            <p>Produktive LLM-Anwendungen mit Evaluierung, Guardrails und Kostenkontrolle — vom Copilot bis zum autonomen Workflow-Agenten.</p>
-            <p class="feature-tags">LLMs · RAG · Agents · Evals</p>
-          </article>
-          <article class="feature reveal">
-            <h3>Datenplattform &amp; Architektur</h3>
-            <p>Cloud-DWH, Schichtenmodell, Governance und Observability — das Fundament, auf dem Modelle nicht umfallen.</p>
-            <p class="feature-tags">Snowflake · BigQuery · Data Contracts</p>
-          </article>
-          <article class="feature reveal">
-            <h3>Analytics Engineering</h3>
-            <p>Modulare dbt-Modelle mit Tests, Dokumentation und CI — verlässliche Metriken statt zehn Wahrheiten pro Kennzahl.</p>
-            <p class="feature-tags">dbt · Slim CI · Semantic Layer</p>
-          </article>
-          <article class="feature reveal">
-            <h3>Process Mining</h3>
-            <p>Event-Logs extrahieren, Varianten sichtbar machen, Engpässe quantifizieren — und mit KI-gestützter Ursachenanalyse beseitigen.</p>
-            <p class="feature-tags">Order-to-Cash · Journey Mining</p>
-          </article>
-          <article class="feature reveal">
-            <h3>Decision Intelligence</h3>
-            <p>Funnel-, Journey- und Attributionsanalysen, die in Entscheidungen münden — inklusive der Vorstandsfolie dazu.</p>
-            <p class="feature-tags">Journey KPIs · Forecasting · Reporting</p>
-          </article>
+    <!-- ============ 02 LEISTUNGEN ============ -->
+    <section id="services" class="section" data-index="02" data-name="Leistungen" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label reveal">§ 02 — Leistungen</p>
+          <h2 id="services-title" class="reveal">Von der <span class="ki">KI</span>-Strategie bis zur Pipeline, die sie trägt.</h2>
+          <p class="section-head__aside label reveal">6 Leistungen · 0 davon buchbar</p>
+        </div>
+        <ol class="services" role="list">
+          <li class="service reveal">
+            <span class="service__no">L.01</span>
+            <h3 class="service__title"><span class="ki">KI</span>-Strategie &amp; Use-Case-Portfolio</h3>
+            <p class="service__desc">Wir trennen die Use Cases, die Wert schaffen, von denen, die nur gut klingen. Priorisiert nach Datenreife, Risiko und Business Impact.</p>
+            <p class="service__tags">Assessment · Roadmap · Build-vs-Buy</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">L.02</span>
+            <h3 class="service__title">GenAI &amp; Agentensysteme</h3>
+            <p class="service__desc">Produktive LLM-Anwendungen mit Evaluierung, Guardrails und Kostenkontrolle — vom Copilot bis zum autonomen Workflow-Agenten.</p>
+            <p class="service__tags">LLMs · RAG · Agents · Evals</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">L.03</span>
+            <h3 class="service__title">Datenplattform &amp; Architektur</h3>
+            <p class="service__desc">Cloud-DWH, Schichtenmodell, Governance und Observability — das Fundament, auf dem Modelle nicht umfallen.</p>
+            <p class="service__tags">Snowflake · BigQuery · Data Contracts</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">L.04</span>
+            <h3 class="service__title">Analytics Engineering</h3>
+            <p class="service__desc">Modulare dbt-Modelle mit Tests, Dokumentation und CI — verlässliche Metriken statt zehn Wahrheiten pro Kennzahl.</p>
+            <p class="service__tags">dbt · Slim CI · Semantic Layer</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">L.05</span>
+            <h3 class="service__title">Process Mining</h3>
+            <p class="service__desc">Event-Logs extrahieren, Varianten sichtbar machen, Engpässe quantifizieren — und mit <span class="ki">KI</span>-gestützter Ursachenanalyse beseitigen.</p>
+            <p class="service__tags">Order-to-Cash · Journey Mining</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__no">L.06</span>
+            <h3 class="service__title">Decision Intelligence</h3>
+            <p class="service__desc">Funnel-, Journey- und Attributionsanalysen, die in Entscheidungen münden — inklusive der Vorstandsfolie dazu.</p>
+            <p class="service__tags">Journey KPIs · Forecasting · Reporting</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 03 POWERPOINT ============ -->
+    <section id="powerpoint" class="section section--ppt" data-index="03" data-name="PowerPoint" aria-labelledby="ppt-title">
+      <div class="wrap ppt">
+        <div class="ppt__copy">
+          <p class="label reveal">§ 03 — Kernkompetenz</p>
+          <h2 id="ppt-title" class="ppt__title reveal">Und ja: Wir können auch PowerPoint.</h2>
+          <p class="ppt__punch reveal">Nur eben nicht für Geld.</p>
+          <p class="reveal">Jede Beratung behauptet, sie liefere mehr als Folien. Wir behaupten das Gegenteil und liefern nicht einmal die. Zur Ansicht: ein Auszug aus 428 Folien pro Woche.</p>
+        </div>
+
+        <div class="deck reveal" id="deck">
+          <div class="deck__frame">
+            <div class="deck__slides" aria-live="polite">
+              <article class="slide is-active" aria-roledescription="Folie" aria-label="Folie 1 von 4">
+                <p class="slide__kicker">Management Summary</p>
+                <h3 class="slide__h">Strategische Neuausrichtung der Neuausrichtung</h3>
+                <p class="slide__sub">Entwurf · v17_final_FINAL_2.pptx</p>
+              </article>
+              <article class="slide" aria-roledescription="Folie" aria-label="Folie 2 von 4" hidden>
+                <p class="slide__kicker">Priorisierung</p>
+                <div class="matrix" aria-label="Zwei-mal-zwei-Matrix">
+                  <span class="matrix__q">Quick Wins</span>
+                  <span class="matrix__q">Big Bets</span>
+                  <span class="matrix__q">Folien</span>
+                  <span class="matrix__q matrix__q--hot">Noch mehr Folien</span>
+                  <span class="matrix__ax matrix__ax--x">Wirkung →</span>
+                  <span class="matrix__ax matrix__ax--y">Aufwand →</span>
+                </div>
+              </article>
+              <article class="slide" aria-roledescription="Folie" aria-label="Folie 3 von 4" hidden>
+                <p class="slide__kicker">Folien pro Woche, indexiert</p>
+                <svg class="slide__chart" viewBox="0 0 300 150" role="img" aria-label="Balkendiagramm, dessen Balken zufällig eine Krone bilden">
+                  <path class="chart-axis" d="M20 130H290" />
+                  <rect x="40" y="60" width="34" height="70" />
+                  <rect x="88" y="92" width="34" height="38" />
+                  <rect x="136" y="20" width="34" height="110" class="chart-peak" />
+                  <rect x="184" y="92" width="34" height="38" />
+                  <rect x="232" y="60" width="34" height="70" />
+                </svg>
+                <p class="slide__note">Abb. 3: Wachstum. Achsen bewusst unbeschriftet. Ähnlichkeit mit einer Krone rein zufällig.</p>
+              </article>
+              <article class="slide" aria-roledescription="Folie" aria-label="Folie 4 von 4" hidden>
+                <p class="slide__kicker">Nächste Schritte</p>
+                <ul class="slide__list">
+                  <li>Folgetermin vereinbaren</li>
+                  <li>Folgetermin für den Folgetermin vereinbaren</li>
+                  <li>Folie 5 erstellen</li>
+                </ul>
+              </article>
+            </div>
+            <p class="deck__foot"><span><span class="ki">KI</span>nxner Consulting · Vertraulich (erfunden)</span><span id="deckCount">1 / 428</span></p>
+          </div>
+          <div class="deck__controls">
+            <button class="deck__btn" id="deckPrev" aria-label="Vorherige Folie">←</button>
+            <button class="deck__btn" id="deckNext" aria-label="Nächste Folie">→</button>
+            <span class="label deck__hint">Weitere 424 Folien auf Anfrage. Die Anfrage wird abgelehnt.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ VORGEHEN ============ -->
-    <section id="approach" class="section section--tint" aria-labelledby="approach-title">
-      <div class="container">
-        <p class="eyebrow reveal">Vorgehen</p>
-        <h2 id="approach-title" class="reveal">Fünf Schritte. Keiner davon ist ein Workshop ohne Ergebnis.</h2>
-        <ol class="approach-steps">
-          <li class="reveal">
-            <span class="step-no">01</span>
+    <!-- ============ 04 VORGEHEN ============ -->
+    <section id="approach" class="section" data-index="04" data-name="Vorgehen" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label reveal">§ 04 — Vorgehen</p>
+          <h2 id="approach-title" class="reveal">Fünf Schritte. Keiner davon ist ein Workshop ohne Ergebnis.</h2>
+        </div>
+        <ol class="steps" role="list">
+          <li class="step reveal">
+            <span class="step__no">01</span>
             <h3>Discovery &amp; Scope</h3>
             <p>Datenquellen, Pain Points und Quick Wins in zwei Wochen priorisiert — mit KPI-Canvas statt Wunschliste.</p>
           </li>
-          <li class="reveal">
-            <span class="step-no">02</span>
+          <li class="step reveal">
+            <span class="step__no">02</span>
             <h3>Fundament</h3>
             <p>Minimal tragfähige Plattform, erste dbt-Modelle, orchestrierte Pipelines. Ab Tag eins versioniert und getestet.</p>
           </li>
-          <li class="reveal">
-            <span class="step-no">03</span>
+          <li class="step reveal">
+            <span class="step__no">03</span>
             <h3>Qualitätslayer</h3>
             <p>Tests, Data Contracts, Observability, Dokumentation — die unglamouröse Hälfte, die später alles rettet.</p>
           </li>
-          <li class="reveal">
-            <span class="step-no">04</span>
-            <h3><em class="ki-inline">KI</em> in Produktion</h3>
+          <li class="step reveal">
+            <span class="step__no">04</span>
+            <h3><span class="ki">KI</span> in Produktion</h3>
             <p>Use Cases auf dem Fundament produktiv setzen: Evaluierung, Guardrails, Kostenmonitoring, Betrieb.</p>
           </li>
-          <li class="reveal">
-            <span class="step-no">05</span>
+          <li class="step reveal">
+            <span class="step__no">05</span>
             <h3>Enablement</h3>
             <p>Ihr Team übernimmt. Handover-Patterns, Pairing, Playbooks — wir machen uns planmäßig überflüssig.</p>
           </li>
@@ -181,41 +345,75 @@
       </div>
     </section>
 
-    <!-- ============ MANIFEST ============ -->
-    <section id="manifest" class="manifest" aria-labelledby="manifest-title">
-      <div class="container manifest__inner">
-        <p class="eyebrow eyebrow--dark reveal">Das <em class="ki-inline">KI</em>-Manifest, §1</p>
+    <!-- ============ 05 MANIFEST ============ -->
+    <section id="manifest" class="manifest" data-index="05" data-name="Manifest" aria-labelledby="manifest-title">
+      <div class="wrap manifest__inner">
+        <p class="label reveal">§ 05 — Das <span class="ki">KI</span>-Manifest, §1</p>
         <blockquote class="reveal">
-          <p id="manifest-title">„Ein Modell ohne saubere Daten ist eine Meinung mit GPU."</p>
+          <p id="manifest-title"><span class="q">„</span>Ein Modell ohne saubere Daten ist eine Meinung mit GPU.<span class="q">“</span></p>
         </blockquote>
-        <p class="manifest__note reveal">Deshalb beginnt bei uns jedes KI-Projekt im Data Engineering — und endet erst, wenn es im Betrieb läuft.</p>
+        <p class="manifest__note reveal">Deshalb beginnt bei uns jedes <span class="ki">KI</span>-Projekt im Data Engineering — und endet erst, wenn es im Betrieb läuft. Das Manifest hat nur einen Paragrafen. Mehr passte nicht auf die Folie.</p>
       </div>
     </section>
 
-    <!-- ============ CASES ============ -->
-    <section id="cases" class="section" aria-labelledby="cases-title">
-      <div class="container">
-        <p class="eyebrow reveal">Cases</p>
-        <h2 id="cases-title" class="reveal">Vier Projekte, die es nie gegeben hat.</h2>
-        <p class="reveal">Erfunden, jedes einzelne. Die Buzzwords sind echt, die Zahlen nicht — und niemand hat je einen dieser Aufträge erteilt.</p>
-        <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+    <!-- ============ 06 CASES ============ -->
+    <section id="cases" class="section" data-index="06" data-name="Cases" aria-labelledby="cases-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label reveal">§ 06 — Cases</p>
+          <h2 id="cases-title" class="reveal">Vier Projekte, die es nie gegeben hat.</h2>
+          <p class="section-head__aside reveal">Erfunden, jedes einzelne. Die Buzzwords sind echt, die Zahlen nicht — und niemand hat je einen dieser Aufträge erteilt.</p>
+        </div>
+        <div id="projectsGrid" class="cases"></div>
         <template id="projectCardTemplate">
-          <article class="project-card reveal">
-            <p class="project-metric"></p>
-            <h3 class="project-title"></h3>
-            <p class="project-desc"></p>
-            <ul class="project-tags" role="list"></ul>
+          <article class="case reveal">
+            <p class="case__meta"><span class="case__fig"></span><span>erfunden</span></p>
+            <svg class="case__chart" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="case__line" /></svg>
+            <p class="case__metric"></p>
+            <h3 class="case__title"></h3>
+            <p class="case__desc"></p>
+            <ul class="case__tags" role="list"></ul>
           </article>
         </template>
-        <p class="projects-fallback" id="projectsFallback" hidden>Weitere erfundene Referenzen auf Anfrage. Die NDA-Ordner sind ebenfalls erfunden.</p>
+        <p class="cases__fallback" id="projectsFallback" hidden>Weitere erfundene Referenzen auf Anfrage. Die NDA-Ordner sind ebenfalls erfunden.</p>
+        <noscript><p class="cases__fallback">Die Cases werden per JavaScript geladen. Ohne JavaScript bleibt nur die Wahrheit: Es gibt sie nicht.</p></noscript>
+        <p class="cases__note label reveal">Weitere erfundene Referenzen auf Anfrage. Die NDA-Ordner sind ebenfalls erfunden.</p>
       </div>
     </section>
 
-    <!-- ============ WAS SOLL DAS ============ -->
-    <section id="was-soll-das" class="section section--tint" aria-labelledby="was-soll-das-title">
-      <div class="container contact__inner">
-        <div>
-          <p class="eyebrow reveal">Was soll das?</p>
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section section--tight" data-index="06a" data-name="Fragen" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <div class="section-head section-head--stack">
+          <p class="label reveal">§ 06a — Häufige Fragen</p>
+          <h2 id="faq-title" class="reveal">Kurze Fragen, kürzere Antworten.</h2>
+        </div>
+        <div class="faq__list">
+          <details class="reveal">
+            <summary>Können Sie uns ein Angebot machen?</summary>
+            <p>Nein. Auch nicht auf Nachfrage.</p>
+          </details>
+          <details class="reveal">
+            <summary>Was kostet ein Erstgespräch?</summary>
+            <p>Nichts. Es findet auch nicht statt.</p>
+          </details>
+          <details class="reveal">
+            <summary>Arbeiten Sie remote oder vor Ort?</summary>
+            <p>Weder noch. Das ist unser Alleinstellungsmerkmal.</p>
+          </details>
+          <details class="reveal">
+            <summary>Wer steckt dahinter?</summary>
+            <p>Größtenteils eine <span class="ki">KI</span>. Sie hat die Texte geschrieben, die Seite gestaltet und die Krone gezeichnet. Beraten hat sie niemanden.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 WAS SOLL DAS ============ -->
+    <section id="was-soll-das" class="section section--alt" data-index="07" data-name="Was soll das?" aria-labelledby="was-soll-das-title">
+      <div class="wrap about">
+        <div class="about__text">
+          <p class="label reveal">§ 07 — Was soll das?</p>
           <h2 id="was-soll-das-title" class="reveal">Eine Beratung, die es nicht gibt.</h2>
           <p class="reveal">
             Diese Seite ist ein Spaßprojekt. Es gibt kein Unternehmen namens KInxner
@@ -225,8 +423,8 @@
           <p class="reveal">
             Entstanden ist sie als Fingerübung: Wie weit trägt Beratungssprache, wenn man
             ihr nichts zu essen gibt außer sich selbst? Geschrieben hat sie größtenteils
-            eine KI — was den Witz erst rund macht. Eine KI-Beratungsseite, verfasst von
-            einer KI, die nichts berät.
+            eine <span class="ki">KI</span> — was den Witz erst rund macht. Eine <span class="ki">KI</span>-Beratungsseite, verfasst von
+            einer <span class="ki">KI</span>, die nichts berät. Das Design übrigens auch.
           </p>
           <p class="reveal">
             Falls du wegen des Datenschutzes oder schlicht aus Neugier schreiben willst:
@@ -234,22 +432,25 @@
             Angebote gibt es hier keine, auch nicht auf Nachfrage.
           </p>
         </div>
-        <div class="contact__card reveal" aria-hidden="true">
-          <svg class="contact__crown" viewBox="0 0 48 32" focusable="false">
-            <path d="M4 26 L2 8 L13 16 L24 2 L35 16 L46 8 L44 26 Z" />
-            <rect x="4" y="28" width="40" height="3" rx="1.5" />
-          </svg>
-          <p class="contact__card-line">Kein Erstgespräch<br />0 min · unverbindlich · existiert nicht</p>
+        <div class="ticket reveal" aria-hidden="true">
+          <p class="ticket__head"><span>Termin</span><span>Nr. 000</span></p>
+          <svg class="crown ticket__crown" viewBox="0 0 48 40" focusable="false"><use href="#crown-mark" /></svg>
+          <p class="ticket__title">Kein Erstgespräch</p>
+          <p class="ticket__line">0 min · unverbindlich · existiert nicht</p>
+          <p class="ticket__foot"><span>Ort: nirgendwo</span><span>Zeit: nie</span></p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> <em class="ki-inline">KI</em>nxner Consulting — ein Satireprojekt. Kein Unternehmen, keine Leistungen, keine echten Projekte.</p>
-      <p class="footer-egg">Und ja: Wir können auch PowerPoint. Nur eben nicht für Geld. · <a href="datenschutz.html">Datenschutz</a></p>
-      <button id="backToTop" class="back-to-top" aria-label="Nach oben">↑</button>
+    <div class="wrap">
+      <p class="footer-mark" aria-hidden="true"><svg class="crown footer-crown" viewBox="0 0 48 40" focusable="false"><use href="#crown-mark" /></svg><span class="ki">KI</span>nxner</p>
+      <div class="footer-row">
+        <p>&copy; <span id="year">2026</span> <span class="ki">KI</span>nxner Consulting — ein Satireprojekt. Kein Unternehmen, keine Leistungen, keine echten Projekte.</p>
+        <p class="footer-egg">Und ja: Wir können auch PowerPoint. Nur eben nicht für Geld.</p>
+        <p class="footer-links"><a href="datenschutz.html">Datenschutz</a> <a href="#top" class="back-to-top" id="backToTop">Nach oben ↑</a></p>
+      </div>
     </div>
   </footer>
 
