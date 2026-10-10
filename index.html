@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KInxner Consulting — Satire. Eine Beratung, die es nicht gibt.</title>
-  <meta name="description" content="Satirisches Spaßprojekt: die Website einer KI-Beratung, die es nicht gibt. Kein Unternehmen, keine Leistungen, keine echten Projekte. Entstanden als Fingerübung mit Claude." />
+  <title>BREIT — Hemden für breite Schultern. Eine Konzeptstudie.</title>
+  <meta name="description" content="BREIT ist die Konzeptstudie eines Online-Shops für Bodybuilder und breit gebaute Männer: Hemden, Overshirts und Business-Casual, geschnitten für Kreuz, Oberarm und schmale Taille. Kein echter Shop." />
   <link rel="canonical" href="https://kinxner-consulting.de/" />
   <!-- Eigentumsnachweis fuer die Google Search Console.
        Muss dauerhaft im <head> der Startseite bleiben: Google prueft das Tag
@@ -12,448 +12,396 @@
        Authorized Domain. Nicht entfernen. -->
   <meta name="google-site-verification" content="37TVtqb3Z6b---uzSy0M3xMzxqpeBndF286Ku5GI4yU" />
   <meta name="color-scheme" content="light" />
-  <meta name="theme-color" content="#E8E6E0" />
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="KInxner Consulting" />
+  <meta name="theme-color" content="#EEE9E1" />
+  <meta property="og:site_name" content="BREIT" />
   <meta property="og:url" content="https://kinxner-consulting.de/" />
-  <meta property="og:title" content="KInxner Consulting — Satire. Eine Beratung, die es nicht gibt." />
-  <meta property="og:description" content="Ein Spaßprojekt: Beratungssprache bis zum Anschlag, ohne Beratung dahinter. Kein Unternehmen, keine Leistungen, alle Projekte erfunden." />
+  <meta property="og:title" content="BREIT — Hemden für breite Schultern" />
+  <meta property="og:description" content="Konzeptstudie eines Shops für breit gebaute Männer: Hemden und Business-Casual, geschnitten für Kreuz und Oberarm." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://kinxner-consulting.de/assets/img/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="KInxner Consulting – Krone als Blaupause, mit dem Hinweis: Satire, eine Beratung, die es nicht gibt" />
+  <meta property="og:image:alt" content="BREIT – Wortmarke mit Maßlinie und ein Hemd für breite Schultern" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/img/shop/hero.webp" as="image" fetchpriority="high" />
+  <link rel="stylesheet" href="assets/css/breit.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="assets/js/app.js"></script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-  <!-- Satire-Hinweis: steht bewusst vor allem anderen und liegt auch über dem Intro. -->
-  <aside class="satire-bar" aria-label="Satire-Hinweis">
+  <aside class="concept-bar" aria-label="Hinweis zur Konzeptstudie">
     <p class="wrap">
-      <strong>Satire.</strong>
-      <span>Diese Seite ist ein Spaßprojekt und kein Unternehmen. Es werden keine Leistungen angeboten, alle Projekte und Kennzahlen sind frei erfunden.</span>
-      <a href="#was-soll-das">Was soll das?</a>
+      <strong>Konzeptstudie</strong>
+      <span>BREIT ist ein Designentwurf, kein echter Shop. Es gibt keine Bestellungen und keine Zahlungen.</span>
+      <a href="#konzept">Mehr dazu</a>
     </p>
   </aside>
 
+  <div class="intro" id="intro" hidden aria-hidden="true">
+    <div class="intro__mark">
+      <span class="intro__word">Breit</span>
+      <span class="intro__dim label"><b></b><i></i><span>Schulter 58 cm</span><i></i><b></b></span>
+    </div>
+    <span class="intro__skip label">Klick zum Überspringen</span>
+  </div>
+
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
-      <a href="#top" class="brand" aria-label="KInxner Consulting – Startseite">
-        <svg class="crown brand__crown" id="brandCrown" viewBox="0 0 48 40" aria-hidden="true" focusable="false">
-          <use href="#crown-mark" />
-        </svg>
-        <span class="brand__word"><span class="ki">KI</span>nxner</span>
+      <div class="header-left">
+        <button class="menu-btn" id="menuBtn" aria-controls="menu" aria-expanded="false">
+          <span class="menu-btn__icon" aria-hidden="true"></span><span>Menü</span>
+        </button>
+        <nav class="nav-links" aria-label="Schnellnavigation">
+          <a href="kollektion.html">Kollektion</a>
+          <a href="index.html#passform">Passform</a>
+          <a href="index.html#lookbook">Lookbook</a>
+        </nav>
+      </div>
+      <a href="index.html" class="brand" aria-label="BREIT – Startseite">
+        <span class="brand__word">Breit</span>
+        <svg class="brand__rule" viewBox="0 0 100 7" preserveAspectRatio="none" aria-hidden="true"><path d="M0.5 0v7M99.5 0v7M0.5 3.5h99" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
       </a>
-      <p class="header-index" aria-hidden="true"><span id="sectionIndex">§ 01</span> <span id="sectionName">Start</span></p>
-      <div class="header-actions">
-        <a href="#was-soll-das" class="pill">Was soll das?</a>
-        <button class="menu-btn" id="menuBtn" aria-controls="menuPanel" aria-expanded="false">
-          <span class="menu-btn__label">Menü</span>
-          <span class="menu-btn__icon" aria-hidden="true"></span>
+      <div class="header-right">
+        <a class="header-link header-link--wide" href="index.html#groesse">Größenberater</a>
+        <button class="cart-btn" id="cartBtn" aria-controls="drawer" aria-expanded="false">
+          <span class="cart-btn__label">Warenkorb</span>
+          <span class="cart-btn__count" data-cart-count>0</span>
+          <span class="sr-only">Artikel</span>
         </button>
       </div>
     </div>
   </header>
 
-  <nav class="menu" id="menuPanel" aria-label="Hauptnavigation" hidden>
-    <div class="menu__inner">
-      <p class="label menu__label">Inhaltsverzeichnis <span>· 7 Blätter, 0 Angebote</span></p>
-      <ol class="menu__list">
-        <li><a href="#services"><span class="menu__no">02</span>Leistungen</a></li>
-        <li><a href="#powerpoint"><span class="menu__no">03</span>PowerPoint</a></li>
-        <li><a href="#approach"><span class="menu__no">04</span>Vorgehen</a></li>
-        <li><a href="#manifest"><span class="menu__no">05</span>Manifest</a></li>
-        <li><a href="#cases"><span class="menu__no">06</span>Cases</a></li>
-        <li><a href="#was-soll-das"><span class="menu__no">07</span>Was soll das?</a></li>
-      </ol>
-      <p class="menu__foot label">contact@kinxner-consulting.de — Angebote gibt es keine.</p>
-    </div>
-  </nav>
-
-  <!-- Die Krone, einmal definiert. Konstruktion: docs/redesign/crown.md -->
-  <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
-    <defs>
-      <linearGradient id="crown-gold" x1="0" y1="0" x2="0.35" y2="1">
-        <stop offset="0" stop-color="#EDC25C" />
-        <stop offset="0.55" stop-color="#C9971F" />
-        <stop offset="1" stop-color="#A87A12" />
-      </linearGradient>
-      <g id="crown-mark">
-        <path d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z" />
-        <circle cx="3" cy="12" r="2.6" />
-        <circle cx="45" cy="12" r="2.6" />
-        <circle class="crown__jewel" cx="24" cy="6" r="2.6" />
-        <rect x="6" y="34" width="36" height="4" />
-      </g>
-    </defs>
-  </svg>
-
   <main id="main">
 
-    <!-- ============ 01 HERO ============ -->
-    <section class="hero" id="top" data-index="01" data-name="Start" aria-labelledby="hero-title">
-      <canvas class="hero__gl" id="heroGl" aria-hidden="true"></canvas>
-      <div class="wrap hero__inner">
-        <div class="sheet-meta" aria-hidden="true">
-          <span>KInxner Consulting</span>
-          <span>Blatt 01 / 07</span>
-          <span>Maßstab 1 : 1</span>
-          <span>Stand: nie verbindlich</span>
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__grid-lines" aria-hidden="true"></div>
+      <div class="wrap grid hero__inner">
+        <div class="hero__copy">
+          <p class="hero__meta label"><span>Kollektion 01</span><span>Herbst / Winter 2026</span><span>Hemden · Overshirts · Sakkos</span></p>
+          <h1 class="display hero__title" id="hero-title">
+            <span class="line-mask"><span>Gebaut für</span></span>
+            <span class="line-mask"><span><span class="serif">breite</span> Schultern.</span></span>
+          </h1>
+          <p class="lead">Hemden und Business-Casual für Bodybuilder und breit gebaute Männer. Weit im Kreuz, weit am Oberarm, schmal an der Taille. Damit das Hemd sitzt, ohne dass Sie zwischen Knopfleiste und Zelt wählen müssen.</p>
+          <div class="hero__actions">
+            <a class="btn" href="kollektion.html">Kollektion ansehen <svg class="btn__arrow" viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+            <a class="btn btn--ghost" href="#groesse">Größe finden</a>
+          </div>
         </div>
-
-        <h1 id="hero-title" class="hero__title">
-          <span class="line"><span>Wir schreiben</span></span>
-          <span class="line"><span><span class="ki">KI</span> groß.</span></span>
-          <span class="line"><span class="gold">Wörtlich.</span></span>
-        </h1>
-
-        <div class="hero__grid">
-          <div class="hero__copy">
-            <p class="label">Satire · Eine <span class="ki">KI</span>-Beratung, die es nicht gibt</p>
-            <p class="lead">
-              Künstliche Intelligenz beeindruckt nur, wenn das Datenfundament trägt.
-              Wir bauen beides: produktive <span class="ki">KI</span>-Systeme und die Plattform darunter —
-              testbar, nachvollziehbar, ohne Buzzword-Aufschlag.
-            </p>
-            <div class="cta-group">
-              <a href="#was-soll-das" class="btn btn--solid">Was soll das hier? <span aria-hidden="true">→</span></a>
-              <a href="#services" class="btn btn--line">Zum Unfug</a>
-            </div>
+        <figure class="hero__figure">
+          <div class="hero__img">
+            <img src="assets/img/shop/hero.webp" width="1200" height="1500" alt="Das Capo Jersey-Sakko in Marine über dem Atlas Oxford-Hemd in Himmel, auf einer unsichtbaren Büste mit breitem Kreuz" fetchpriority="high" />
+            <svg class="hero__dims" id="heroDims" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
           </div>
-
-          <figure class="blueprint" aria-labelledby="bp-caption">
-            <svg class="blueprint__svg" viewBox="0 0 640 632" role="img" aria-labelledby="bp-title">
-              <title id="bp-title">Konstruktionszeichnung der KInxner-Krone mit Bemaßung</title>
-              <g class="bp-grid" aria-hidden="true">
-                <path d="M0 60H640M0 120H640M0 180H640M0 240H640M0 300H640M0 360H640M0 420H640M0 480H640M0 540H640M60 0V600M120 0V600M180 0V600M240 0V600M300 0V600M360 0V600M420 0V600M480 0V600M540 0V600M600 0V600" />
-              </g>
-              <g class="bp-construct" aria-hidden="true">
-                <circle cx="300" cy="100" r="44" pathLength="1" />
-                <circle cx="90" cy="160" r="44" pathLength="1" />
-                <circle cx="510" cy="160" r="44" pathLength="1" />
-                <path d="M90 160 300 100 510 160" pathLength="1" />
-                <path d="M300 40V530" pathLength="1" />
-              </g>
-              <g class="bp-crown">
-                <path class="bp-body" d="M120 350 90 160l120 95 90-155 90 155 120-95-30 190Z" pathLength="1" />
-                <circle cx="90" cy="160" r="26" pathLength="1" />
-                <circle cx="510" cy="160" r="26" pathLength="1" />
-                <circle class="bp-jewel" cx="300" cy="100" r="26" pathLength="1" />
-                <rect x="120" y="380" width="360" height="40" pathLength="1" />
-              </g>
-              <g class="bp-dims" aria-hidden="true">
-                <path d="M120 480V498M480 480V498M120 490H480M114 496l12-12M474 496l12-12" />
-                <path d="M566 74V420M556 74H576M556 420H576M560 80l12-12M560 426l12-12" />
-                <path d="M274 100H210L190 76" />
-                <path d="M120 400H80L62 424" />
-                <path d="M90 186V232Q126 238 146 204M90 232 60 296" />
-              </g>
-              <g class="bp-labels">
-                <text x="300" y="522" text-anchor="middle">Breite: skaliert mit dem Tagessatz (0 €)</text>
-                <text x="596" y="247" transform="rotate(90 596 247)" text-anchor="middle">Zackenhöhe: nicht verhandelbar</text>
-                <text x="184" y="46" text-anchor="end">Material: Blattgold.</text>
-                <text x="184" y="64" text-anchor="end" class="bp-minor">Aus Prinzip.</text>
-                <text x="12" y="444">Fundament:</text>
-                <text x="12" y="462">Data Engineering</text>
-                <text x="12" y="318" class="bp-minor">∠ 38°,</text>
-                <text x="12" y="336" class="bp-minor">strategisch</text>
-              </g>
-              <g class="bp-titleblock" aria-hidden="true">
-                <path d="M396 540H630V628H396ZM396 562H630M396 584H630M396 606H630" />
-                <text x="404" y="556">Objekt: Krone, 1 Stück</text>
-                <text x="404" y="578">Gezeichnet: KI · Blatt 01</text>
-                <text x="404" y="600">Geprüft: niemand</text>
-                <text x="404" y="622">Maßstab: 1 : 1 Ego</text>
-              </g>
-            </svg>
-            <figcaption id="bp-caption" class="label">Abb. 01 — Die Krone. Konstruiert auf einem 48er-Raster, bemaßt nach Gefühl.</figcaption>
-          </figure>
-        </div>
-
-        <dl class="stats" aria-label="Frei erfundene Kennzahlen">
-          <div class="stat">
-            <dt>weniger Bauchgefühl</dt>
-            <dd><span class="stat__num" data-count="97.3" data-decimals="1">97,3</span><span class="stat__unit">%</span></dd>
-          </div>
-          <div class="stat">
-            <dt>Folien pro Woche automatisiert</dt>
-            <dd><span class="stat__num" data-count="428">428</span></dd>
-          </div>
-          <div class="stat">
-            <dt>Buzzwords ohne Definition</dt>
-            <dd><span class="stat__num" data-count="0">0</span></dd>
-          </div>
-          <div class="stat">
-            <dt>Krone im Logo</dt>
-            <dd><span class="stat__num" data-count="1">1</span></dd>
-          </div>
+          <figcaption class="hero__caption label"><span>Capo Sakko · Atlas Himmel</span><span>Größe XL · Passform Power</span></figcaption>
+        </figure>
+        <dl class="hero__specs">
+          <div><dt class="label">Schulterbreite</dt><dd>bis 62<small>cm</small></dd></div>
+          <div><dt class="label">Oberarm</dt><dd>bis 51<small>cm</small></dd></div>
+          <div><dt class="label">Drop Brust–Taille</dt><dd>16–28<small>cm</small></dd></div>
+          <div><dt class="label">Größen × Passformen</dt><dd>5 × 3</dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- ============ 02 LEISTUNGEN ============ -->
-    <section id="services" class="section" data-index="02" data-name="Leistungen" aria-labelledby="services-title">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Schulter +6 cm <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg> <span class="o">Oberarm +5 cm</span> <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg> Taille −8 cm <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg> <span class="o">Saum +3 cm</span> <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg></span>
+        <span>Schulter +6 cm <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg> <span class="o">Oberarm +5 cm</span> <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg> Taille −8 cm <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg> <span class="o">Saum +3 cm</span> <svg class="sep" viewBox="0 0 10 10"><path d="M0 5h10M5 0v10" stroke="currentColor"/></svg></span>
+      </div>
+    </div>
+
+    <!-- ============ PROBLEM / SCHNITT ============ -->
+    <section class="section on-ink" id="schnitt" aria-labelledby="schnitt-title">
       <div class="wrap">
         <div class="section-head">
-          <p class="label reveal">§ 02 — Leistungen</p>
-          <h2 id="services-title" class="reveal">Von der <span class="ki">KI</span>-Strategie bis zur Pipeline, die sie trägt.</h2>
-          <p class="section-head__aside label reveal">6 Leistungen · 0 davon buchbar</p>
+          <p class="section-head__no label muted"><span>01</span><span>Der Schnitt</span></p>
+          <h2 class="h2 section-head__title reveal" id="schnitt-title">Konfektion wird für Kleiderbügel geschnitten. <span class="serif">Wir</span> schneiden für Kreuz.</h2>
+          <p class="section-head__aside lead reveal">Wer trainiert, kennt das Dilemma: Passt das Hemd an der Brust, hängt es an der Taille wie ein Segel. Passt es an der Taille, spannt die Knopfleiste. Der Fehler liegt nicht bei Ihnen, sondern im Schnittmuster.</p>
         </div>
-        <ol class="services" role="list">
-          <li class="service reveal">
-            <span class="service__no">L.01</span>
-            <h3 class="service__title"><span class="ki">KI</span>-Strategie &amp; Use-Case-Portfolio</h3>
-            <p class="service__desc">Wir trennen die Use Cases, die Wert schaffen, von denen, die nur gut klingen. Priorisiert nach Datenreife, Risiko und Business Impact.</p>
-            <p class="service__tags">Assessment · Roadmap · Build-vs-Buy</p>
-          </li>
-          <li class="service reveal">
-            <span class="service__no">L.02</span>
-            <h3 class="service__title">GenAI &amp; Agentensysteme</h3>
-            <p class="service__desc">Produktive LLM-Anwendungen mit Evaluierung, Guardrails und Kostenkontrolle — vom Copilot bis zum autonomen Workflow-Agenten.</p>
-            <p class="service__tags">LLMs · RAG · Agents · Evals</p>
-          </li>
-          <li class="service reveal">
-            <span class="service__no">L.03</span>
-            <h3 class="service__title">Datenplattform &amp; Architektur</h3>
-            <p class="service__desc">Cloud-DWH, Schichtenmodell, Governance und Observability — das Fundament, auf dem Modelle nicht umfallen.</p>
-            <p class="service__tags">Snowflake · BigQuery · Data Contracts</p>
-          </li>
-          <li class="service reveal">
-            <span class="service__no">L.04</span>
-            <h3 class="service__title">Analytics Engineering</h3>
-            <p class="service__desc">Modulare dbt-Modelle mit Tests, Dokumentation und CI — verlässliche Metriken statt zehn Wahrheiten pro Kennzahl.</p>
-            <p class="service__tags">dbt · Slim CI · Semantic Layer</p>
-          </li>
-          <li class="service reveal">
-            <span class="service__no">L.05</span>
-            <h3 class="service__title">Process Mining</h3>
-            <p class="service__desc">Event-Logs extrahieren, Varianten sichtbar machen, Engpässe quantifizieren — und mit <span class="ki">KI</span>-gestützter Ursachenanalyse beseitigen.</p>
-            <p class="service__tags">Order-to-Cash · Journey Mining</p>
-          </li>
-          <li class="service reveal">
-            <span class="service__no">L.06</span>
-            <h3 class="service__title">Decision Intelligence</h3>
-            <p class="service__desc">Funnel-, Journey- und Attributionsanalysen, die in Entscheidungen münden — inklusive der Vorstandsfolie dazu.</p>
-            <p class="service__tags">Journey KPIs · Forecasting · Reporting</p>
-          </li>
-        </ol>
+        <div class="pattern">
+          <div class="pattern__drawing" id="patternDrawing">
+            <svg viewBox="0 0 640 560" role="img" aria-labelledby="pattern-desc">
+              <title id="pattern-desc">Schnittmuster eines Vorderteils: Standard-Konfektion gestrichelt, BREIT in Messing. BREIT ist an Schulter und Brust breiter, an der Taille schmaler.</title>
+              <g class="p-grid">
+                <path d="M40 40V520M120 40V520M200 40V520M280 40V520M360 40V520M440 40V520M520 40V520M600 40V520"/>
+                <path d="M40 40H600M40 120H600M40 200H600M40 280H600M40 360H600M40 440H600M40 520H600"/>
+              </g>
+              <!-- Standard: gerades Vorderteil -->
+              <path class="p-std draw" d="M200 70 L300 92 L392 100 Q404 168 384 214 L380 470 L180 470 L178 214 Q162 168 176 100 Z" transform="translate(15 0)"/>
+              <!-- BREIT: weite Schulter, V-Form -->
+              <path class="p-breit draw" style="--len:1500" d="M210 70 L300 88 L452 96 Q474 176 440 224 Q420 300 404 470 L196 470 Q176 300 158 224 Q122 176 146 96 Z"/>
+              <!-- Bemaßung Schulter -->
+              <g class="p-dim-b draw" style="--len:400"><path d="M146 52 V40 M452 52 V40 M146 46 H452"/></g>
+              <text class="b" x="299" y="34" text-anchor="middle">Schulter +6 cm</text>
+              <!-- Brust -->
+              <g class="p-dim-b draw" style="--len:400"><path d="M150 252 H446"/><path d="M150 246v12M446 246v12"/></g>
+              <text class="b" x="298" y="244" text-anchor="middle">Brust +12 cm</text>
+              <!-- Taille -->
+              <g class="p-dim draw" style="--len:300"><path d="M188 400 H412"/><path d="M188 394v12M412 394v12"/></g>
+              <text x="300" y="392" text-anchor="middle">Taille −8 cm</text>
+              <!-- Saum -->
+              <g class="p-dim draw" style="--len:200"><path d="M560 470 V500 M548 470 H572 M548 500 H572"/></g>
+              <text x="580" y="489">Saum +3 cm</text>
+              <text x="40" y="548" class="b">Vorderteil · Größe XL · Passform Power</text>
+              <text x="600" y="548" text-anchor="end">M 1 : 5</text>
+            </svg>
+            <p class="pattern__legend label"><span><i></i>Konfektion XL</span><span><i class="b"></i>BREIT XL Power</span></p>
+          </div>
+          <ol class="pattern__points">
+            <li class="reveal">
+              <p class="delta">+12 cm</p>
+              <h3>Die Knopfleiste bleibt zu</h3>
+              <p>Mehr Weite über der Brust, verteilt auf Vorderteil und Rücken. Dazu ein Knopfabstand von 8,5 cm, damit zwischen den Knöpfen nichts aufklafft.</p>
+            </li>
+            <li class="reveal">
+              <p class="delta">+5 cm</p>
+              <h3>Der Ärmel schnürt nicht ab</h3>
+              <p>Eine höhere, weitere Armkugel und mehr Oberarmweite. Sie können den Arm heben, ohne dass das Hemd aus der Hose rutscht.</p>
+            </li>
+            <li class="reveal">
+              <p class="delta">−8 cm</p>
+              <h3>Die Taille wird kein Zelt</h3>
+              <p>Abnäher im Rücken und ein Seitennahtverlauf, der der V-Form folgt. Der Drop zwischen Brust und Taille ist in drei Stufen wählbar.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <!-- ============ 03 POWERPOINT ============ -->
-    <section id="powerpoint" class="section section--ppt" data-index="03" data-name="PowerPoint" aria-labelledby="ppt-title">
-      <div class="wrap ppt">
-        <div class="ppt__copy">
-          <p class="label reveal">§ 03 — Kernkompetenz</p>
-          <h2 id="ppt-title" class="ppt__title reveal">Und ja: Wir können auch PowerPoint.</h2>
-          <p class="ppt__punch reveal">Nur eben nicht für Geld.</p>
-          <p class="reveal">Jede Beratung behauptet, sie liefere mehr als Folien. Wir behaupten das Gegenteil und liefern nicht einmal die. Zur Ansicht: ein Auszug aus 428 Folien pro Woche.</p>
+    <!-- ============ KOLLEKTION ============ -->
+    <section class="section" id="kollektion" aria-labelledby="kollektion-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-head__no label muted"><span>02</span><span>Die Kollektion</span></p>
+          <h2 class="h2 section-head__title reveal" id="kollektion-title">Neun Stücke. <span class="serif">Kein</span> Kompromiss am Bizeps.</h2>
+          <div class="section-head__aside reveal">
+            <p class="muted">Oxford, Popeline, Leinen, Flanell, Strick und ein Sakko ohne Polster. Jedes Stück in fünf Größen und drei Passformen.</p>
+            <p style="margin-top:18px"><a class="link label" href="kollektion.html">Alle Stücke ansehen</a></p>
+          </div>
         </div>
+        <div class="products" id="featured" data-ids="atlas-kreide,forum-streifen,ridge-waldkaro,nocturne-schwarz">
+          <noscript><p class="muted">Die Produkte werden per JavaScript geladen. <a href="kollektion.html">Zur Kollektion</a></p></noscript>
+        </div>
+      </div>
+    </section>
 
-        <div class="deck reveal" id="deck">
-          <div class="deck__frame">
-            <div class="deck__slides" aria-live="polite">
-              <article class="slide is-active" aria-roledescription="Folie" aria-label="Folie 1 von 4">
-                <p class="slide__kicker">Management Summary</p>
-                <h3 class="slide__h">Strategische Neuausrichtung der Neuausrichtung</h3>
-                <p class="slide__sub">Entwurf · v17_final_FINAL_2.pptx</p>
-              </article>
-              <article class="slide" aria-roledescription="Folie" aria-label="Folie 2 von 4" hidden>
-                <p class="slide__kicker">Priorisierung</p>
-                <div class="matrix" aria-label="Zwei-mal-zwei-Matrix">
-                  <span class="matrix__q">Quick Wins</span>
-                  <span class="matrix__q">Big Bets</span>
-                  <span class="matrix__q">Folien</span>
-                  <span class="matrix__q matrix__q--hot">Noch mehr Folien</span>
-                  <span class="matrix__ax matrix__ax--x">Wirkung →</span>
-                  <span class="matrix__ax matrix__ax--y">Aufwand →</span>
-                </div>
-              </article>
-              <article class="slide" aria-roledescription="Folie" aria-label="Folie 3 von 4" hidden>
-                <p class="slide__kicker">Folien pro Woche, indexiert</p>
-                <svg class="slide__chart" viewBox="0 0 300 150" role="img" aria-label="Balkendiagramm, dessen Balken zufällig eine Krone bilden">
-                  <path class="chart-axis" d="M20 130H290" />
-                  <rect x="40" y="60" width="34" height="70" />
-                  <rect x="88" y="92" width="34" height="38" />
-                  <rect x="136" y="20" width="34" height="110" class="chart-peak" />
-                  <rect x="184" y="92" width="34" height="38" />
-                  <rect x="232" y="60" width="34" height="70" />
-                </svg>
-                <p class="slide__note">Abb. 3: Wachstum. Achsen bewusst unbeschriftet. Ähnlichkeit mit einer Krone rein zufällig.</p>
-              </article>
-              <article class="slide" aria-roledescription="Folie" aria-label="Folie 4 von 4" hidden>
-                <p class="slide__kicker">Nächste Schritte</p>
-                <ul class="slide__list">
-                  <li>Folgetermin vereinbaren</li>
-                  <li>Folgetermin für den Folgetermin vereinbaren</li>
-                  <li>Folie 5 erstellen</li>
-                </ul>
-              </article>
+    <!-- ============ PASSFORM ============ -->
+    <section class="section" id="passform" aria-labelledby="passform-title" style="background:var(--bone-2)">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-head__no label muted"><span>03</span><span>Passform</span></p>
+          <h2 class="h2 section-head__title reveal" id="passform-title">Drei Passformen. <span class="serif">Ein</span> Maß, auf das es ankommt.</h2>
+          <p class="section-head__aside muted reveal">Der Drop ist die Differenz zwischen Brust- und Taillenweite. Bei Konfektion liegt er bei etwa 8 cm. Bei uns beginnt er bei 16.</p>
+        </div>
+        <div class="fit">
+          <div class="fit__figure" aria-hidden="true">
+            <span class="corner corner--tl label">Vorderansicht</span>
+            <span class="corner corner--br label">Raster 10 cm</span>
+            <span class="corner corner--bl label"><i class="ghost-key"></i>Konfektion XL</span>
+            <svg viewBox="0 0 500 500">
+              <path class="torso-ghost" id="torsoGhost" d="" />
+              <path class="torso" id="torsoPath" d="" />
+              <g class="dim">
+                <path id="dimChest" d="" />
+                <path id="dimWaist" d="" />
+              </g>
+              <text id="txtChest" x="250" y="188" text-anchor="middle">Brust 134 cm</text>
+              <text id="txtWaist" x="250" y="484" text-anchor="middle">Taille 112 cm</text>
+            </svg>
+          </div>
+          <div class="fit__panel">
+            <div class="tabs" role="tablist" aria-label="Passform wählen">
+              <button role="tab" id="tab-athletic" aria-selected="false" aria-controls="fitPanel" data-fit="athletic">Athletic<small>Drop 16</small></button>
+              <button role="tab" id="tab-power" aria-selected="true" aria-controls="fitPanel" data-fit="power">Power<small>Drop 22</small></button>
+              <button role="tab" id="tab-titan" aria-selected="false" aria-controls="fitPanel" data-fit="titan">Titan<small>Drop 28</small></button>
             </div>
-            <p class="deck__foot"><span><span class="ki">KI</span>nxner Consulting · Vertraulich (erfunden)</span><span id="deckCount">1 / 428</span></p>
-          </div>
-          <div class="deck__controls">
-            <button class="deck__btn" id="deckPrev" aria-label="Vorherige Folie">←</button>
-            <button class="deck__btn" id="deckNext" aria-label="Nächste Folie">→</button>
-            <span class="label deck__hint">Weitere 424 Folien auf Anfrage. Die Anfrage wird abgelehnt.</span>
+            <div id="fitPanel" role="tabpanel" aria-labelledby="tab-power" aria-live="polite">
+              <p class="fit__drop"><strong data-fit-drop>22</strong><span class="label">cm Drop<br />Brust minus Taille</span></p>
+              <p class="lead" data-fit-text style="margin-top:18px">Für breite Kreuze und schwere Arme. 22 cm Drop, Oberarm und Schulter je eine Stufe weiter.</p>
+              <table class="fit__table" style="margin-top:22px">
+                <caption class="sr-only">Maße in Größe XL</caption>
+                <tbody>
+                  <tr><th scope="row">Brustweite Hemd (XL)</th><td data-fit-chest>134 cm</td></tr>
+                  <tr><th scope="row">Taillenweite Hemd (XL)</th><td data-fit-waist>112 cm</td></tr>
+                  <tr><th scope="row">Oberarmweite Hemd (XL)</th><td data-fit-arm>52 cm</td></tr>
+                  <tr><th scope="row">Vergleich Konfektion XL</th><td><b>Drop 8 cm</b></td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 04 VORGEHEN ============ -->
-    <section id="approach" class="section" data-index="04" data-name="Vorgehen" aria-labelledby="approach-title">
+    <!-- ============ LOOKBOOK ============ -->
+    <section class="section on-ink lookbook" id="lookbook" aria-labelledby="lookbook-title">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:clamp(32px,4vw,56px)">
+          <p class="section-head__no label muted"><span>04</span><span>Lookbook · Casual Business</span></p>
+          <h2 class="h2 section-head__title reveal" id="lookbook-title">Eine Woche, <span class="serif">vier</span> Termine, null Spannung an der Knopfleiste.</h2>
+        </div>
+      </div>
+      <div class="lookbook__pin">
+        <div class="lookbook__track" id="lookTrack" tabindex="0" aria-label="Lookbook, horizontal scrollbar">
+          <figure class="look">
+            <div class="look__img"><img src="assets/img/shop/look-1.webp" width="1000" height="1250" loading="lazy" alt="Capo Sakko in Marine über Atlas Oxford in Himmel, Dreiviertelansicht im Gegenlicht" /></div>
+            <figcaption class="look__cap"><span class="look__time num">MO 08:40</span><p>Vorstand. Capo Sakko über Atlas Himmel, Knopf offen.</p><a class="link label" href="produkt.html?id=capo-marine">Capo ansehen</a></figcaption>
+          </figure>
+          <figure class="look look--wide">
+            <div class="look__img"><img src="assets/img/shop/look-2.webp" width="1600" height="1100" loading="lazy" alt="Nahaufnahme von Kragen und Knopfleiste des Forum Stretch-Popeline-Hemds" /></div>
+            <figcaption class="look__cap"><span class="look__time num">DI 12:15</span><p>Mittag mit Kunden. Forum Streifen, Haifischkragen, keine Krawatte.</p><a class="link label" href="produkt.html?id=forum-streifen">Forum ansehen</a></figcaption>
+          </figure>
+          <figure class="look">
+            <div class="look__img"><img src="assets/img/shop/look-3.webp" width="1000" height="1250" loading="lazy" alt="Ridge Flanell-Overshirt im Waldkaro, im Streiflicht" /></div>
+            <figcaption class="look__cap"><span class="look__time num">FR 17:30</span><p>Feierabend. Ridge Overshirt statt Jacke.</p><a class="link label" href="produkt.html?id=ridge-waldkaro">Ridge ansehen</a></figcaption>
+          </figure>
+          <figure class="look">
+            <div class="look__img"><img src="assets/img/shop/look-4.webp" width="1000" height="1250" loading="lazy" alt="Nocturne Satin-Stretch-Hemd in Nachtschwarz vor dunklem Grund" /></div>
+            <figcaption class="look__cap"><span class="look__time num">SA 20:00</span><p>Abendessen. Nocturne, oberster Knopf offen.</p><a class="link label" href="produkt.html?id=nocturne-schwarz">Nocturne ansehen</a></figcaption>
+          </figure>
+        </div>
+        <div class="lookbook__progress" aria-hidden="true"><span id="lookProgress"></span></div>
+        <div class="wrap lookbook__nav">
+          <button class="round-btn" data-look="-1" aria-label="Zurück"><svg viewBox="0 0 18 10" aria-hidden="true"><path d="M18 5H2M6 1L2 5l4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+          <button class="round-btn" data-look="1" aria-label="Weiter"><svg viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GRÖSSENBERATER ============ -->
+    <section class="section" id="groesse" aria-labelledby="groesse-title">
       <div class="wrap">
         <div class="section-head">
-          <p class="label reveal">§ 04 — Vorgehen</p>
-          <h2 id="approach-title" class="reveal">Fünf Schritte. Keiner davon ist ein Workshop ohne Ergebnis.</h2>
+          <p class="section-head__no label muted"><span>05</span><span>Größenberater</span></p>
+          <h2 class="h2 section-head__title reveal" id="groesse-title">Drei Maße. <span class="serif">Zwanzig</span> Sekunden.</h2>
+          <p class="section-head__aside muted reveal">Maßband um die breiteste Stelle der Brust, um die Taille auf Nabelhöhe und um den angespannten Oberarm. Wir rechnen den Rest.</p>
         </div>
-        <ol class="steps" role="list">
-          <li class="step reveal">
-            <span class="step__no">01</span>
-            <h3>Discovery &amp; Scope</h3>
-            <p>Datenquellen, Pain Points und Quick Wins in zwei Wochen priorisiert — mit KPI-Canvas statt Wunschliste.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__no">02</span>
-            <h3>Fundament</h3>
-            <p>Minimal tragfähige Plattform, erste dbt-Modelle, orchestrierte Pipelines. Ab Tag eins versioniert und getestet.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__no">03</span>
-            <h3>Qualitätslayer</h3>
-            <p>Tests, Data Contracts, Observability, Dokumentation — die unglamouröse Hälfte, die später alles rettet.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__no">04</span>
-            <h3><span class="ki">KI</span> in Produktion</h3>
-            <p>Use Cases auf dem Fundament produktiv setzen: Evaluierung, Guardrails, Kostenmonitoring, Betrieb.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__no">05</span>
-            <h3>Enablement</h3>
-            <p>Ihr Team übernimmt. Handover-Patterns, Pairing, Playbooks — wir machen uns planmäßig überflüssig.</p>
-          </li>
-        </ol>
+        <div class="finder">
+          <form class="finder__form" id="finder" onsubmit="return false">
+            <div class="range">
+              <div class="range__top"><label class="label" for="fBrust">Brustumfang</label><output class="range__val" for="fBrust" id="oBrust">120<small>cm</small></output></div>
+              <input type="range" id="fBrust" min="100" max="150" value="120" step="1" />
+              <div class="range__scale label" aria-hidden="true"><span>100</span><span>125</span><span>150</span></div>
+            </div>
+            <div class="range">
+              <div class="range__top"><label class="label" for="fTaille">Taillenumfang</label><output class="range__val" for="fTaille" id="oTaille">98<small>cm</small></output></div>
+              <input type="range" id="fTaille" min="76" max="130" value="98" step="1" />
+              <div class="range__scale label" aria-hidden="true"><span>76</span><span>103</span><span>130</span></div>
+            </div>
+            <div class="range">
+              <div class="range__top"><label class="label" for="fArm">Oberarm, angespannt</label><output class="range__val" for="fArm" id="oArm">44<small>cm</small></output></div>
+              <input type="range" id="fArm" min="34" max="56" value="44" step="1" />
+              <div class="range__scale label" aria-hidden="true"><span>34</span><span>45</span><span>56</span></div>
+            </div>
+          </form>
+          <div class="finder__result" aria-live="polite">
+            <p class="label muted">Unsere Empfehlung</p>
+            <p class="finder__size"><strong id="rSize">XL</strong><span id="rFit">Power</span></p>
+            <p id="rText" class="muted">Ihr Drop liegt bei 22 cm.</p>
+            <a class="btn" id="rLink" href="kollektion.html?size=XL&amp;fit=power">Passende Stücke ansehen</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ============ 05 MANIFEST ============ -->
-    <section id="manifest" class="manifest" data-index="05" data-name="Manifest" aria-labelledby="manifest-title">
-      <div class="wrap manifest__inner">
-        <p class="label reveal">§ 05 — Das <span class="ki">KI</span>-Manifest, §1</p>
-        <blockquote class="reveal">
-          <p id="manifest-title"><span class="q">„</span>Ein Modell ohne saubere Daten ist eine Meinung mit GPU.<span class="q">“</span></p>
-        </blockquote>
-        <p class="manifest__note reveal">Deshalb beginnt bei uns jedes <span class="ki">KI</span>-Projekt im Data Engineering — und endet erst, wenn es im Betrieb läuft. Das Manifest hat nur einen Paragrafen. Mehr passte nicht auf die Folie.</p>
-      </div>
-    </section>
-
-    <!-- ============ 06 CASES ============ -->
-    <section id="cases" class="section" data-index="06" data-name="Cases" aria-labelledby="cases-title">
+    <!-- ============ ATELIER ============ -->
+    <section class="section" id="atelier" aria-labelledby="atelier-title" style="padding-top:0">
       <div class="wrap">
         <div class="section-head">
-          <p class="label reveal">§ 06 — Cases</p>
-          <h2 id="cases-title" class="reveal">Vier Projekte, die es nie gegeben hat.</h2>
-          <p class="section-head__aside reveal">Erfunden, jedes einzelne. Die Buzzwords sind echt, die Zahlen nicht — und niemand hat je einen dieser Aufträge erteilt.</p>
+          <p class="section-head__no label muted"><span>06</span><span>Atelier</span></p>
+          <h2 class="h2 section-head__title reveal" id="atelier-title">Vier Dinge, die wir <span class="serif">anders</span> nähen.</h2>
         </div>
-        <div id="projectsGrid" class="cases"></div>
-        <template id="projectCardTemplate">
-          <article class="case reveal">
-            <p class="case__meta"><span class="case__fig"></span><span>erfunden</span></p>
-            <svg class="case__chart" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="case__line" /></svg>
-            <p class="case__metric"></p>
-            <h3 class="case__title"></h3>
-            <p class="case__desc"></p>
-            <ul class="case__tags" role="list"></ul>
-          </article>
-        </template>
-        <p class="cases__fallback" id="projectsFallback" hidden>Weitere erfundene Referenzen auf Anfrage. Die NDA-Ordner sind ebenfalls erfunden.</p>
-        <noscript><p class="cases__fallback">Die Cases werden per JavaScript geladen. Ohne JavaScript bleibt nur die Wahrheit: Es gibt sie nicht.</p></noscript>
-        <p class="cases__note label reveal">Weitere erfundene Referenzen auf Anfrage. Die NDA-Ordner sind ebenfalls erfunden.</p>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section id="faq" class="section section--tight" data-index="06a" data-name="Fragen" aria-labelledby="faq-title">
-      <div class="wrap faq">
-        <div class="section-head section-head--stack">
-          <p class="label reveal">§ 06a — Häufige Fragen</p>
-          <h2 id="faq-title" class="reveal">Kurze Fragen, kürzere Antworten.</h2>
-        </div>
-        <div class="faq__list">
-          <details class="reveal">
-            <summary>Können Sie uns ein Angebot machen?</summary>
-            <p>Nein. Auch nicht auf Nachfrage.</p>
-          </details>
-          <details class="reveal">
-            <summary>Was kostet ein Erstgespräch?</summary>
-            <p>Nichts. Es findet auch nicht statt.</p>
-          </details>
-          <details class="reveal">
-            <summary>Arbeiten Sie remote oder vor Ort?</summary>
-            <p>Weder noch. Das ist unser Alleinstellungsmerkmal.</p>
-          </details>
-          <details class="reveal">
-            <summary>Wer steckt dahinter?</summary>
-            <p>Größtenteils eine <span class="ki">KI</span>. Sie hat die Texte geschrieben, die Seite gestaltet und die Krone gezeichnet. Beraten hat sie niemanden.</p>
-          </details>
+        <div class="atelier">
+          <div class="atelier__img">
+            <figure class="reveal-img"><img src="assets/img/shop/atelier.webp" width="1000" height="1250" loading="lazy" alt="Nahaufnahme des Atlas Oxford-Hemds: Oxford-Bindung, Kragenspitze mit Knopf und Perlmuttknöpfe an der Knopfleiste" /></figure>
+            <p class="label" style="margin-top:12px;color:var(--mute)">Atlas Oxford · Button-down-Kragen, Perlmuttknöpfe</p>
+          </div>
+          <ol class="atelier__list">
+            <li class="reveal">
+              <span class="no">01</span>
+              <div><h3 class="h3">Die Armkugel</h3><p>Sie sitzt höher und ist weiter als bei Konfektion. Der Ärmel hängt dadurch nicht am Deltamuskel, sondern läuft darüber. Heben Sie den Arm, kommt das Hemd mit, ohne aus der Hose zu rutschen.</p></div>
+              <p class="fig label"><span>Kugelhöhe +2,5 cm</span><span>Oberarm bis 51 cm</span></p>
+            </li>
+            <li class="reveal">
+              <span class="no">02</span>
+              <div><h3 class="h3">Der Knopfabstand</h3><p>8,5 statt 10 cm. Auf einer breiten Brust entscheidet dieser Zentimeter, ob die Knopfleiste schließt oder kleine Fenster aufmacht.</p></div>
+              <p class="fig label"><span>8 Knöpfe statt 7</span><span>Perlmutt, 11 mm</span></p>
+            </li>
+            <li class="reveal">
+              <span class="no">03</span>
+              <div><h3 class="h3">Der Rücken</h3><p>Eine Kellerfalte in der Passe gibt Weite, wenn sich der Latissimus streckt, und schließt sich, wenn Sie stehen. Dazu zwei Abnäher, die der V-Form folgen.</p></div>
+              <p class="fig label"><span>Kellerfalte 4 cm</span><span>2 Abnäher</span></p>
+            </li>
+            <li class="reveal">
+              <span class="no">04</span>
+              <div><h3 class="h3">Der Kragen</h3><p>Halsweite und Brustweite sind bei uns entkoppelt. Wer einen 43er Kragen und 130 cm Brust hat, bekommt beides, nicht den Kragen der nächsten Größe.</p></div>
+              <p class="fig label"><span>Halsweite 41–47</span><span>Steg 3,5 cm</span></p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- ============ 07 WAS SOLL DAS ============ -->
-    <section id="was-soll-das" class="section section--alt" data-index="07" data-name="Was soll das?" aria-labelledby="was-soll-das-title">
-      <div class="wrap about">
-        <div class="about__text">
-          <p class="label reveal">§ 07 — Was soll das?</p>
-          <h2 id="was-soll-das-title" class="reveal">Eine Beratung, die es nicht gibt.</h2>
-          <p class="reveal">
-            Diese Seite ist ein Spaßprojekt. Es gibt kein Unternehmen namens KInxner
-            Consulting, keine Mitarbeiter, keine Kunden und nichts zu beauftragen.
-            Sämtliche Leistungen, Vorgehensschritte, Cases und Kennzahlen sind erfunden.
-          </p>
-          <p class="reveal">
-            Entstanden ist sie als Fingerübung: Wie weit trägt Beratungssprache, wenn man
-            ihr nichts zu essen gibt außer sich selbst? Geschrieben hat sie größtenteils
-            eine <span class="ki">KI</span> — was den Witz erst rund macht. Eine <span class="ki">KI</span>-Beratungsseite, verfasst von
-            einer <span class="ki">KI</span>, die nichts berät. Das Design übrigens auch.
-          </p>
-          <p class="reveal">
-            Falls du wegen des Datenschutzes oder schlicht aus Neugier schreiben willst:
-            <a href="mailto:contact@kinxner-consulting.de">contact@kinxner-consulting.de</a>.
-            Angebote gibt es hier keine, auch nicht auf Nachfrage.
-          </p>
-        </div>
-        <div class="ticket reveal" aria-hidden="true">
-          <p class="ticket__head"><span>Termin</span><span>Nr. 000</span></p>
-          <svg class="crown ticket__crown" viewBox="0 0 48 40" focusable="false"><use href="#crown-mark" /></svg>
-          <p class="ticket__title">Kein Erstgespräch</p>
-          <p class="ticket__line">0 min · unverbindlich · existiert nicht</p>
-          <p class="ticket__foot"><span>Ort: nirgendwo</span><span>Zeit: nie</span></p>
+    <!-- ============ SERVICE ============ -->
+    <section class="section--tight" aria-label="Service">
+      <div class="wrap">
+        <div class="service">
+          <div><p class="label muted">01 · Versand</p><h3>Ab 150 € kostenlos</h3><p>Sonst 7,90 €. Gedacht als Lieferung in 2–3 Werktagen.</p></div>
+          <div><p class="label muted">02 · Rückgabe</p><h3>30 Tage</h3><p>Passt etwas nicht, tauschen Sie Größe oder Passform.</p></div>
+          <div><p class="label muted">03 · Änderung</p><h3>Ärmel kürzen inklusive</h3><p>Auf Wunsch auf den Zentimeter, ohne Aufpreis.</p></div>
+          <div><p class="label muted">04 · Hinweis</p><h3>Alles Konzept</h3><p>Diese Leistungen gibt es nicht. Sie zeigen, wie der Shop gedacht ist.</p></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="konzept">
     <div class="wrap">
-      <p class="footer-mark" aria-hidden="true"><svg class="crown footer-crown" viewBox="0 0 48 40" focusable="false"><use href="#crown-mark" /></svg><span class="ki">KI</span>nxner</p>
-      <div class="footer-row">
-        <p>&copy; <span id="year">2026</span> <span class="ki">KI</span>nxner Consulting — ein Satireprojekt. Kein Unternehmen, keine Leistungen, keine echten Projekte.</p>
-        <p class="footer-egg">Und ja: Wir können auch PowerPoint. Nur eben nicht für Geld.</p>
-        <p class="footer-links"><a href="datenschutz.html">Datenschutz</a> <a href="#top" class="back-to-top" id="backToTop">Nach oben ↑</a></p>
+      <div class="footer-top">
+        <div class="footer-claim">
+          <p class="h3">Hemden für Männer, denen Konfektion zu schmal ist.</p>
+          <a class="btn btn--light" href="kollektion.html">Zur Kollektion</a>
+        </div>
+        <div class="footer-col">
+          <p class="label">Shop</p>
+          <a href="kollektion.html?cat=hemden">Hemden</a>
+          <a href="kollektion.html?cat=overshirts">Overshirts</a>
+          <a href="kollektion.html?cat=polos">Polos</a>
+          <a href="kollektion.html?cat=sakkos">Sakkos</a>
+        </div>
+        <div class="footer-col">
+          <p class="label">BREIT</p>
+          <a href="index.html#schnitt">Der Schnitt</a>
+          <a href="index.html#passform">Passform</a>
+          <a href="index.html#groesse">Größenberater</a>
+          <a href="index.html#atelier">Atelier</a>
+        </div>
+        <div class="footer-col">
+          <p class="label">Rechtliches</p>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="warenkorb.html">Warenkorb</a>
+        </div>
+        <div class="footer-concept">
+          <p class="label">Konzeptstudie</p>
+          <p>BREIT ist ein Designentwurf für einen Online-Shop. Marke, Produkte, Preise und Texte sind erfunden. Es gibt keine Bestellungen und keine Zahlungen, und der Warenkorb bleibt in Ihrem Browser. Die Produktbilder sind 3D-Renderings, keine Fotos.</p>
+        </div>
       </div>
+    </div>
+    <span class="footer-mark" aria-hidden="true">Breit</span>
+    <div class="wrap footer-bottom label">
+      <span>© 2026 BREIT · Konzeptstudie</span>
+      <span>Gestaltet und gebaut mit Claude</span>
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

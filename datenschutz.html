@@ -3,218 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Datenschutzerklärung — KInxner Consulting</title>
-  <meta name="description" content="Datenschutzerklärung von KInxner Consulting: welche Daten beim Besuch dieser Website verarbeitet werden und welche Rechte Sie haben." />
+  <title>Datenschutzerklärung — BREIT</title>
+  <meta name="description" content="Datenschutzerklärung dieser Website: welche Daten beim Besuch verarbeitet werden und welche Rechte Sie haben." />
   <link rel="canonical" href="https://kinxner-consulting.de/datenschutz.html" />
-  <meta name="robots" content="index,follow" />
   <meta name="color-scheme" content="light" />
-  <meta name="theme-color" content="#E8E6E0" />
-  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="theme-color" content="#EEE9E1" />
+  <meta property="og:site_name" content="BREIT" />
+  <meta property="og:url" content="https://kinxner-consulting.de/datenschutz.html" />
+  <meta property="og:title" content="Datenschutzerklärung — BREIT" />
+  <meta property="og:description" content="Konzeptstudie eines Shops für breit gebaute Männer: Hemden und Business-Casual, geschnitten für Kreuz und Oberarm." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://kinxner-consulting.de/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="BREIT – Wortmarke mit Maßlinie und ein Hemd für breite Schultern" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/breit.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-
-  <style>
-    /* Nur für die Rechtstexte. */
-    .legal { padding-block: clamp(2rem, 6vw, 5rem) var(--section); }
-    .legal__inner { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 var(--gutter); }
-    .legal__head { grid-column: 1 / -1; border-top: 1px solid var(--blue); padding-top: 1rem; margin-bottom: clamp(2rem, 5vw, 4rem); }
-    .legal__head h1 { font-size: clamp(2.6rem, 8vw, 7rem); letter-spacing: -0.055em; line-height: 0.92; margin-bottom: 1.5rem; }
-    .legal__body { grid-column: 4 / span 7; max-width: 68ch; }
-    .legal h2 {
-      font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-      letter-spacing: -0.025em;
-      margin: 2.8em 0 1em;
-      max-width: none;
-      padding-top: 1em;
-      border-top: 1px solid var(--line);
-    }
-    .legal__body > p:first-child { font-size: 1.2rem; line-height: 1.45; }
-    .legal address { font-style: normal; margin-bottom: 1em; }
-    .legal ul { padding-left: 1.2em; margin: 0 0 1em; }
-    .legal li { margin-bottom: 0.4em; }
-    .legal a { word-break: break-word; }
-    .legal__back { margin-top: 3rem; }
-    @media (max-width: 880px) { .legal__body { grid-column: 1 / -1; } }
-  </style>
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="assets/js/app.js"></script>
 </head>
-<body>
+<body data-page="legal">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-  <aside class="satire-bar" aria-label="Satire-Hinweis">
+  <aside class="concept-bar" aria-label="Hinweis zur Konzeptstudie">
     <p class="wrap">
-      <strong>Satire.</strong>
-      <span>Diese Seite gehört zu einem Spaßprojekt und keinem Unternehmen. Die Datenschutzerklärung selbst ist ernst gemeint.</span>
-      <a href="index.html#was-soll-das">Was soll das?</a>
+      <strong>Konzeptstudie</strong>
+      <span>BREIT ist ein Designentwurf, kein echter Shop. Es gibt keine Bestellungen und keine Zahlungen.</span>
+      <a href="#konzept">Mehr dazu</a>
     </p>
   </aside>
 
-  <header class="site-header">
+    <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
-      <a href="index.html" class="brand" aria-label="KInxner Consulting – Startseite">
-        <svg class="crown brand__crown" viewBox="0 0 48 40" aria-hidden="true" focusable="false">
-          <defs>
-      <linearGradient id="crown-gold" x1="0" y1="0" x2="0.35" y2="1">
-        <stop offset="0" stop-color="#EDC25C" />
-        <stop offset="0.55" stop-color="#C9971F" />
-        <stop offset="1" stop-color="#A87A12" />
-      </linearGradient>
-          </defs>
-          <path d="M6 31 3 12l12 9.5L24 6l9 15.5L45 12l-3 19Z" />
-          <circle cx="3" cy="12" r="2.6" />
-          <circle cx="45" cy="12" r="2.6" />
-          <circle class="crown__jewel" cx="24" cy="6" r="2.6" />
-          <rect x="6" y="34" width="36" height="4" />
-        </svg>
-        <span class="brand__word"><span class="ki">KI</span>nxner</span>
+      <div class="header-left">
+        <button class="menu-btn" id="menuBtn" aria-controls="menu" aria-expanded="false">
+          <span class="menu-btn__icon" aria-hidden="true"></span><span>Menü</span>
+        </button>
+        <nav class="nav-links" aria-label="Schnellnavigation">
+          <a href="kollektion.html">Kollektion</a>
+          <a href="index.html#passform">Passform</a>
+          <a href="index.html#lookbook">Lookbook</a>
+        </nav>
+      </div>
+      <a href="index.html" class="brand" aria-label="BREIT – Startseite">
+        <span class="brand__word">Breit</span>
+        <svg class="brand__rule" viewBox="0 0 100 7" preserveAspectRatio="none" aria-hidden="true"><path d="M0.5 0v7M99.5 0v7M0.5 3.5h99" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
       </a>
-      <p class="header-index" aria-hidden="true"><span>§ R</span> Rechtliches</p>
-      <div class="header-actions">
-        <a href="index.html" class="pill">← Startseite</a>
+      <div class="header-right">
+        <a class="header-link header-link--wide" href="index.html#groesse">Größenberater</a>
+        <button class="cart-btn" id="cartBtn" aria-controls="drawer" aria-expanded="false">
+          <span class="cart-btn__label">Warenkorb</span>
+          <span class="cart-btn__count" data-cart-count>0</span>
+          <span class="sr-only">Artikel</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main id="main" class="legal">
-    <div class="wrap legal__inner">
-      <div class="legal__head">
-        <p class="label">§ R — Rechtliches</p>
-        <h1>Datenschutz&shy;erklärung</h1>
-        <p class="label">Stand: September 2026</p>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <nav class="crumbs label" aria-label="Brotkrumen"><a href="index.html">Start</a><span aria-hidden="true">/</span><span aria-current="page">Datenschutz</span></nav>
+        <div class="page-head__row">
+          <h1 class="display">Daten&shy;schutz</h1>
+          <p class="label muted">Stand: Oktober 2026</p>
+        </div>
       </div>
-      <div class="legal__body">
+    </section>
+    <div class="wrap">
+      <article class="prose">
+        <p class="lead">Diese Website ist die Konzeptstudie eines Online-Shops. Es gibt keine Bestellungen, kein Kundenkonto, kein Kontaktformular, keine Cookies und kein Tracking. Trotzdem fallen beim Aufruf einer Website technisch bedingt Daten an. Was das konkret ist und was damit geschieht, steht hier.</p>
 
-      <p>
-        Diese Website ist eine reine Informationsseite. Es gibt kein Kontaktformular,
-        keine Cookies, kein Tracking und keine Nutzerkonten. Trotzdem fallen beim
-        Aufruf einer Website technisch bedingt Daten an. Was das konkret ist und was
-        damit geschieht, steht hier.
-      </p>
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist der Betreiber von kinxner-consulting.de. Sie erreichen ihn für alle Anliegen rund um den Datenschutz, einschließlich der unter Punkt 7 genannten Rechte, unter:</p>
+        <p>E-Mail: <a href="mailto:contact@kinxner-consulting.de">contact@kinxner-consulting.de</a></p>
 
-      <h2>1. Verantwortlicher</h2>
-      <p>
-        Verantwortlich für die Datenverarbeitung auf dieser Website ist der Betreiber
-        von kinxner-consulting.de. Sie erreichen ihn für alle Anliegen rund um den
-        Datenschutz — einschließlich der unter Punkt 8 genannten Rechte — unter:
-      </p>
-      <address>
-        E-Mail: <a href="mailto:contact@kinxner-consulting.de">contact@kinxner-consulting.de</a>
-      </address>
+        <h2>2. Hosting und Server-Logfiles</h2>
+        <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, einem Unternehmen der Microsoft Corporation.</p>
+        <p>Beim Aufruf der Seite überträgt Ihr Browser technisch notwendige Daten an die Server von GitHub, die dort in Logdateien gespeichert werden. Dazu gehören üblicherweise:</p>
+        <ul>
+          <li>Ihre IP-Adresse</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>Name und URL der abgerufenen Datei</li>
+          <li>übertragene Datenmenge und Meldung über den Abruferfolg</li>
+          <li>verwendeter Browser und Betriebssystem</li>
+          <li>gegebenenfalls die zuvor besuchte Seite (Referrer)</li>
+        </ul>
+        <p>Diese Verarbeitung ist technisch erforderlich, um die Website auszuliefern und ihre Stabilität und Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, unser berechtigtes Interesse am zuverlässigen Betrieb dieser Website. Auf Umfang, Speicherdauer und Löschung dieser Logdaten haben wir keinen Einfluss; sie liegen allein bei GitHub.</p>
+        <p>Da GitHub personenbezogene Daten auch in den USA verarbeitet, findet eine Übermittlung in ein Drittland statt. GitHub ist unter dem EU-US Data Privacy Framework zertifiziert. Näheres in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" target="_blank">docs.github.com/site-policy</a>.</p>
 
-      <h2>2. Hosting und Server-Logfiles</h2>
-      <p>
-        Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc.,
-        88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, einem Unternehmen
-        der Microsoft Corporation.
-      </p>
-      <p>
-        Beim Aufruf der Seite überträgt Ihr Browser technisch notwendige Daten an die
-        Server von GitHub, die dort in Logdateien gespeichert werden. Dazu gehören
-        üblicherweise:
-      </p>
-      <ul>
-        <li>Ihre IP-Adresse</li>
-        <li>Datum und Uhrzeit des Zugriffs</li>
-        <li>Name und URL der abgerufenen Datei</li>
-        <li>übertragene Datenmenge und Meldung über den Abruferfolg</li>
-        <li>verwendeter Browser und Betriebssystem</li>
-        <li>gegebenenfalls die zuvor besuchte Seite (Referrer)</li>
-      </ul>
-      <p>
-        Diese Verarbeitung ist technisch erforderlich, um die Website auszuliefern und
-        ihre Stabilität und Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6
-        Abs. 1 lit. f DSGVO — unser berechtigtes Interesse am zuverlässigen Betrieb
-        dieser Website. Auf Umfang, Speicherdauer und Löschung dieser Logdaten haben
-        wir keinen Einfluss; sie liegen allein bei GitHub.
-      </p>
-      <p>
-        Da GitHub personenbezogene Daten auch in den USA verarbeitet, findet eine
-        Übermittlung in ein Drittland statt. GitHub ist unter dem EU-US Data Privacy
-        Framework zertifiziert. Näheres in der Datenschutzerklärung von GitHub:
-        <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" target="_blank">docs.github.com/site-policy</a>.
-      </p>
+        <h2>3. Schriftarten</h2>
+        <p>Diese Website verwendet die Schriftarten Archivo, Instrument Serif und Geist Mono. Sie liegen auf demselben Server wie die Website und werden von dort ausgeliefert. Beim Laden der Schriften wird keine Verbindung zu Servern Dritter aufgebaut, insbesondere nicht zu Google Fonts.</p>
 
-      <h2>3. Schriftarten</h2>
-      <p>
-        Diese Website verwendet die Schriftarten Geist und Geist Mono. Sie liegen
-        auf demselben Server wie die Website und werden von dort ausgeliefert. Beim
-        Laden der Schriften wird keine Verbindung zu Servern Dritter aufgebaut,
-        insbesondere nicht zu Google Fonts.
-      </p>
+        <h2>4. Warenkorb im lokalen Speicher Ihres Browsers</h2>
+        <p>Legen Sie ein Produkt in den Warenkorb, speichert die Seite Produkt, Passform, Größe und Menge im lokalen Speicher Ihres Browsers (localStorage). Außerdem merkt sie sich für die Dauer der Sitzung (sessionStorage), dass die Eröffnungsanimation schon gelaufen ist. Diese Angaben verlassen Ihr Gerät nicht. Sie werden weder an uns noch an Dritte übertragen und lassen sich keiner Person zuordnen.</p>
+        <p>Die Speicherung ist für die von Ihnen gewünschte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie können den Warenkorb jederzeit selbst leeren oder die Website-Daten in Ihrem Browser löschen.</p>
 
-      <h2>4. Kontaktaufnahme per E-Mail</h2>
-      <p>
-        Wenn Sie uns eine E-Mail schreiben, verarbeiten wir Ihre Angaben ausschließlich
-        zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
-        bei vertragsbezogenen Anfragen, sonst Art. 6 Abs. 1 lit. f DSGVO. Wir löschen
-        die Daten, sobald Ihre Anfrage abschließend bearbeitet ist und keine
-        gesetzlichen Aufbewahrungspflichten entgegenstehen.
-      </p>
+        <h2>5. Keine Cookies, kein Tracking, keine Bestellungen</h2>
+        <p>Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Es findet keine Profilbildung und keine automatisierte Entscheidungsfindung statt. Da BREIT eine Konzeptstudie ist, gibt es keine Kasse: Es werden weder Adress- noch Zahlungsdaten abgefragt oder verarbeitet. Ein Cookie-Banner entfällt, weil es nichts einzuwilligen gibt.</p>
 
-      <h2>5. Verlinkung auf LinkedIn</h2>
-      <p>
-        Auf dieser Website befindet sich ein einfacher Link zu einem LinkedIn-Profil.
-        Es sind keine Social-Media-Plugins eingebunden — es werden also erst dann Daten
-        an LinkedIn übertragen, wenn Sie den Link aktiv anklicken. Ab diesem Moment
-        gilt die Datenschutzerklärung von LinkedIn.
-      </p>
+        <h2>6. Kontaktaufnahme per E-Mail und Verschlüsselung</h2>
+        <p>Wenn Sie uns eine E-Mail schreiben, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Wir löschen die Daten, sobald Ihre Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        <p>Diese Website wird ausschließlich über HTTPS ausgeliefert. Die Verbindung zwischen Ihrem Browser und dem Server ist damit verschlüsselt.</p>
 
-      <h2>6. Keine Cookies, kein Tracking</h2>
-      <p>
-        Diese Website setzt keine Cookies, verwendet keine Analyse- oder
-        Tracking-Werkzeuge und speichert nichts im lokalen Speicher Ihres Browsers.
-        Es findet keine Profilbildung und keine automatisierte Entscheidungsfindung
-        statt. Ein Cookie-Banner entfällt deshalb, weil es nichts einzuwilligen gibt.
-      </p>
+        <h2>7. Ihre Rechte</h2>
+        <p>Sie haben jederzeit das Recht auf:</p>
+        <ul>
+          <li>Auskunft über die zu Ihrer Person gespeicherten Daten (Art. 15 DSGVO)</li>
+          <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+          <li>Löschung (Art. 17 DSGVO)</li>
+          <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+        </ul>
+        <p>Für die Ausübung genügt eine formlose E-Mail an die oben genannte Adresse.</p>
 
-      <h2>7. Verschlüsselung</h2>
-      <p>
-        Diese Website wird ausschließlich über HTTPS ausgeliefert. Die Verbindung
-        zwischen Ihrem Browser und dem Server ist damit verschlüsselt.
-      </p>
+        <h2>8. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <p>Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt, können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, etwa bei der Behörde Ihres gewöhnlichen Aufenthaltsorts oder der für den Verantwortlichen zuständigen Stelle.</p>
 
-      <h2>8. Ihre Rechte</h2>
-      <p>Sie haben jederzeit das Recht auf:</p>
-      <ul>
-        <li>Auskunft über die zu Ihrer Person gespeicherten Daten (Art. 15 DSGVO)</li>
-        <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-        <li>Löschung (Art. 17 DSGVO)</li>
-        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-        <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
-      </ul>
-      <p>
-        Für die Ausübung genügt eine formlose E-Mail an die oben genannte Adresse.
-      </p>
-
-      <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
-      <p>
-        Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO
-        verstößt, können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren —
-        etwa bei der Behörde Ihres gewöhnlichen Aufenthaltsorts oder der für den
-        Verantwortlichen zuständigen Stelle.
-      </p>
-
-      <h2>10. Änderungen dieser Erklärung</h2>
-      <p>
-        Wir passen diese Datenschutzerklärung an, wenn sich die Rechtslage oder die
-        auf dieser Website eingesetzten Dienste ändern. Es gilt jeweils die hier
-        abrufbare Fassung.
-      </p>
-
-      <p class="legal__back"><a href="index.html" class="btn btn--line">&larr; Zurück zur Startseite</a></p>
-      </div>
+        <h2>9. Änderungen dieser Erklärung</h2>
+        <p>Wir passen diese Datenschutzerklärung an, wenn sich die Rechtslage oder die auf dieser Website eingesetzten Dienste ändern. Es gilt jeweils die hier abrufbare Fassung.</p>
+        <p style="margin-top:2.5em"><a class="btn btn--ghost" href="index.html">Zurück zur Startseite</a></p>
+      </article>
     </div>
+
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="konzept">
     <div class="wrap">
-      <div class="footer-row">
-        <p>&copy; <span id="year">2026</span> <span class="ki">KI</span>nxner Consulting. Künstlich intelligent seit 2023.</p>
-        <p class="footer-egg">Und ja: Wir können auch PowerPoint. Nur eben nicht für Geld.</p>
-        <p class="footer-links"><a href="index.html">Startseite</a></p>
+      <div class="footer-top">
+        <div class="footer-claim">
+          <p class="h3">Hemden für Männer, denen Konfektion zu schmal ist.</p>
+          <a class="btn btn--light" href="kollektion.html">Zur Kollektion</a>
+        </div>
+        <div class="footer-col">
+          <p class="label">Shop</p>
+          <a href="kollektion.html?cat=hemden">Hemden</a>
+          <a href="kollektion.html?cat=overshirts">Overshirts</a>
+          <a href="kollektion.html?cat=polos">Polos</a>
+          <a href="kollektion.html?cat=sakkos">Sakkos</a>
+        </div>
+        <div class="footer-col">
+          <p class="label">BREIT</p>
+          <a href="index.html#schnitt">Der Schnitt</a>
+          <a href="index.html#passform">Passform</a>
+          <a href="index.html#groesse">Größenberater</a>
+          <a href="index.html#atelier">Atelier</a>
+        </div>
+        <div class="footer-col">
+          <p class="label">Rechtliches</p>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="warenkorb.html">Warenkorb</a>
+        </div>
+        <div class="footer-concept">
+          <p class="label">Konzeptstudie</p>
+          <p>BREIT ist ein Designentwurf für einen Online-Shop. Marke, Produkte, Preise und Texte sind erfunden. Es gibt keine Bestellungen und keine Zahlungen, und der Warenkorb bleibt in Ihrem Browser. Die Produktbilder sind 3D-Renderings, keine Fotos.</p>
+        </div>
       </div>
+    </div>
+    <span class="footer-mark" aria-hidden="true">Breit</span>
+    <div class="wrap footer-bottom label">
+      <span>© 2026 BREIT · Konzeptstudie</span>
+      <span>Gestaltet und gebaut mit Claude</span>
     </div>
   </footer>
 </body>
