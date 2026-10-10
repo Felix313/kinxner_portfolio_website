@@ -620,6 +620,14 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.2); }
 .atelier__list .fig { grid-column: 2; display: flex; gap: 24px; flex-wrap: wrap; color: var(--mute); margin-top: 6px; }
 @media (max-width: 980px) { .atelier__img, .atelier__list { grid-column: 1 / -1; position: static; } .atelier__img { max-width: 520px; } }
 
+/* ---------- Über uns ---------- */
+.owners { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(12px, 1.6vw, 28px); row-gap: 40px; align-items: end; }
+.owners__img { grid-column: 1 / span 5; }
+.owners__img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #241f2a; }
+.owners__img figcaption { margin-top: 12px; }
+.owners__text { grid-column: 7 / span 6; display: grid; gap: 24px; align-content: end; }
+@media (max-width: 980px) { .owners__img, .owners__text { grid-column: 1 / -1; } .owners__img { max-width: 520px; } }
+
 /* ---------- Service ---------- */
 .service { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
 .service > div { padding: 22px 22px 0 0; display: grid; gap: 8px; align-content: start; }
