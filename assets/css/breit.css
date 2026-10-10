@@ -637,6 +637,7 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.2); }
 .footer-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(12px, 1.6vw, 28px); row-gap: 40px; }
 .footer-claim { grid-column: 1 / span 5; display: grid; gap: 22px; align-content: start; }
 .footer-claim .h3 { max-width: 16em; line-height: 1.1; }
+.footer-owners { color: var(--brass-lite); }
 .footer-col { grid-column: span 2; display: grid; gap: 10px; align-content: start; }
 .footer-col .label { color: var(--mute-on-ink); margin-bottom: 6px; }
 .footer-col a { text-decoration: none; color: var(--bone); width: fit-content; }
