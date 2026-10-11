@@ -2,7 +2,7 @@
 
 Hemden und Business-Casual für Bodybuilder und breit gebaute Männer. Weit im Kreuz, weit am Oberarm, schmal an der Taille.
 BREIT ist ein Designentwurf: Marke, Produkte, Preise und Texte sind erfunden, es gibt keine Kasse und keine Zahlung.
-Der Shop funktioniert bis zum Warenkorb. Die Produktbilder sind 3D-Renderings (Blender), keine Fotos.
+Der Shop funktioniert bis zum Warenkorb. Die Bilder sind lizenzfreie Fotos von Pexels (Nachweise im Footer und in `tools/photos/README.md`); die Kleidung darauf ist nicht von BREIT.
 
 Gehostet auf GitHub Pages unter [kinxner-consulting.de](https://kinxner-consulting.de/).
 
@@ -29,7 +29,7 @@ Tinte auf Knochen, Messing als Maßband. Die Formensprache leitet sich aus der A
 | `--bone` | `#EEE9E1` | Grundfläche |
 | `--bone-2` | `#E5DFD4` | Wechselsektion (Passform) |
 | `--paper` | `#F6F3EE` | Drawer, Karten, Dialog |
-| `--stone` | `#CDC6BB` | Bildgrund hinter Produktfotos |
+| `--stone` | `#B1ACA4` | Platzhalter hinter Produktfotos, bis sie geladen sind |
 | `--brass` / `--brass-lite` | `#94703C` / `#C9A467` | Maßlinien, Akzente (auf Knochen / auf Tinte) |
 
 - **Schrift:** Archivo (variabel, Breite 62–125 %): breit gesetzt für Display, normal für Text. Instrument Serif kursiv als Akzent. Geist Mono für Maße und Labels. Alles selbst gehostet (SIL OFL, `assets/fonts/`).
@@ -45,8 +45,9 @@ assets/js/data.js           Produkte, Passformen, Größentabelle, Größenempfe
 assets/js/cart.js           Warenkorb (localStorage, mit Fallback im Arbeitsspeicher)
 assets/js/app.js            Menü, Drawer, Toast, Reveals, Intro
 assets/js/pages.js          Seitenlogik: Start, Kollektion, Produkt, Warenkorb
-assets/img/shop/            Renderings (WebP)
-tools/render/               Blender-Pipeline, mit der die Produktbilder entstanden sind
+assets/img/shop/            Fotos (WebP), zugeschnitten mit tools/photos/build.py
+tools/photos/               Zuschnitt-Skript und Bildnachweise
+tools/render/               Frühere Blender-Pipeline (Renderings, nicht mehr im Einsatz)
 docs/breit/decisions.md     Konzept und Entscheidungen
 ```
 
@@ -62,7 +63,7 @@ python -m http.server 8000
 ## Inhalte pflegen
 
 - Produkte: `assets/js/data.js` (`img` verweist auf `assets/img/shop/<name>.webp`)
-- Neue Bilder: `tools/render/README.md`
+- Neue Bilder: `tools/photos/README.md` (Quelle, Ausschnitt, Nachweis im Footer aller fünf Seiten ergänzen)
 - Farben/Typo: `:root`-Tokens in `assets/css/breit.css`
 
 ## Deploy

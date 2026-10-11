@@ -27,16 +27,17 @@ Vorlage bleibt Outsource Consultants, Inc. (Awwwards Site of the Day, März 2026
 
 ## Bilder
 
-Fotos aus Bildagenturen waren aus der Umgebung nicht erreichbar (Unsplash, Pexels: Proxy 403). Fotos echter Menschen hätten außerdem Models vorgetäuscht.
-Die Mode ist deshalb in Blender gerendert (`tools/render/`):
+**Jetzt: Fotos von Pexels.** Die ersten Entwürfe zeigten 3D-Renderings (siehe unten), weil Bildagenturen aus der Build-Umgebung nicht erreichbar waren. Seit die Freigabe da ist, zeigen Produktseiten, Hero, Lookbook und Atelier echte Fotos breit gebauter, muskulöser Männer in Hemd, Overshirt, Strick und Sakko.
 
-- Oberkörper als Signed-Distance-Feld mit V-Form (Schulter, Deltamuskel, Latissimus, schmale Taille), per Marching Cubes und Voxel-Remesh vernetzt. Das ist die „unsichtbare Büste" der Ghost-Mannequin-Fotografie.
-- Hemd als Schale darauf: Hals-, Saum- (Hemdschwanz) und Ärmelschnitte, prozedurale Falten, Kragen (Kent, Haifisch, Button-down, Stehkragen, Polo) als parametrische Flächen, Knopfleiste, Knöpfe mit vier Löchern, Taschen, Manschetten.
-- Stoffe als Shader: Oxford- und Popeline-Bindung als Bump, Bengal-Streifen, Flanell-Karo, Strick, Leinen-Slub, Moleskin.
-- Sakko als zweite, größere Schale mit Frontöffnung, Revers, Kragen, Pattentaschen und Brustleiste über dem Hemd.
-- Produktbilder auf Steingrund (Front und Dreiviertel), Lookbook und Hero auf dunklem Grund mit Streiflicht.
+- **Quelle:** Pexels (lizenzfrei, Bearbeitung erlaubt, Namensnennung freiwillig). Unsplash war nur über den Bild-CDN erreichbar; Suche und Seiten liegen hinter einer Bot-Sperre für Headless-Browser, die wir nicht umgehen. Pexels-Suche und Bild-CDN funktionierten.
+- **Auswahl:** zuerst Statur (breites Kreuz, schwere Arme, schmale Taille), dann Farbe und Schnitt des Produkts. Wo möglich stammen beide Bilder eines Produkts aus derselben Serie. Ein Model aus einer Serie von Jaime Blanchart trägt Atlas Kreide, Atlas Himmel, Forum und Cove, ein Model von Abhishek Shekhawat Capo und das Hero-Bild.
+- **Ehrlichkeit:** Die Kleidung auf den Fotos ist nicht von BREIT. Der Footer jeder Seite sagt das und nennt die Fotografen; die Tabelle mit allen Pexels-IDs steht in `tools/photos/README.md`.
+- **Kompromisse:** Riviera zeigt ein Leinenhemd mit Kentkragen statt Stehkragen, Cove einen Strick mit Zip-Kragen statt eines Strick-Polos, das Terra-Model ist schlanker gebaut als die übrigen. Bessere Treffer gab es in der Suche nicht.
+- **Zuschnitt:** `tools/photos/build.py` (4:5 bzw. 16:11 für `look-2`, WebP, Produktbilder zusätzlich 600 px für `srcset`). Das zweite Produktbild ist teils ein Detail (Atlas Kreide: Knopfleiste).
+- **Bemaßung im Hero:** Die Maßlinien liegen auf den Schulterpunkten des Sakkos und auf der Sakkokante in Knopfhöhe (`pages.js`, Konstante `d`). Die Schulterlinie sitzt unter den Schultern statt darüber, damit das Etikett nicht über dem Gesicht steht.
+- **OG-Bild:** Wortmarke links unverändert, rechts ein Ausschnitt aus dem Hero-Foto.
 
-Auf der Seite steht offen, dass es Renderings sind (Footer, Datenschutz).
+**Vorher: Renderings.** Die erste Fassung war in Blender gerendert (`tools/render/`, nicht mehr im Einsatz): ein Oberkörper mit V-Form als „unsichtbare Büste", darauf Hemd und Sakko als Schalen mit Kragen, Knopfleiste, Taschen und Stoff-Shadern. Die Renderings stehen in der Git-Historie (bis Commit `f37851a`).
 
 ## Shop-Logik
 

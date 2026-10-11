@@ -1,6 +1,8 @@
-# Render-Pipeline für die BREIT-Produktbilder
+# Render-Pipeline für die BREIT-Produktbilder (nicht mehr im Einsatz)
 
-Die Bilder in `assets/img/shop/` sind keine Fotos, sondern Renderings aus Blender (Cycles), erzeugt mit diesen Skripten.
+> Die Seite zeigt inzwischen Fotos von Pexels (`tools/photos/`). Die Renderings aus dieser Pipeline stehen nur noch in der Git-Historie (bis Commit `f37851a`).
+
+Die ersten Bilder in `assets/img/shop/` waren keine Fotos, sondern Renderings aus Blender (Cycles), erzeugt mit diesen Skripten.
 
 | Datei | Aufgabe |
 |---|---|

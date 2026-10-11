@@ -38,11 +38,11 @@ function home(ctx) {
     feat.innerHTML = feat.dataset.ids.split(',').map((id) => cardHTML(byId(id))).join('');
   }
 
-  // Bemaßung über dem Hero-Bild (Koordinaten aus dem Rendering, Bild 400 × 500)
+  // Bemaßung über dem Hero-Bild (Koordinaten im Hero-Foto, Bild 400 × 500)
   const dims = $('#heroDims');
   if (dims) {
-    // aus der Kamera des Hero-Renderings projiziert (tools/render)
-    const d = { sl: [76, 134], sr: [318, 142], wl: [147, 341], wr: [288, 333] };
+    // Schulterpunkte des Sakkos und Sakkokante auf Höhe des Knopfs, am Foto abgelesen
+    const d = { sl: [108, 172], sr: [352, 182], wl: [104, 458], wr: [348, 458] };
     const line = (a, b, off, label, anchor = 'middle') => {
       const y = Math.min(a[1], b[1]) + off;
       return `<g>
@@ -52,10 +52,10 @@ function home(ctx) {
         <text x="${(a[0] + b[0]) / 2}" y="${y - 10}" text-anchor="${anchor}">${label}</text></g>
       </g>`;
     };
-    dims.innerHTML = line(d.sl, d.sr, -30, 'Schulter 56 cm') + line(d.wl, d.wr, 46, 'Taille 112 cm');
+    dims.innerHTML = line(d.sl, d.sr, 40, 'Schulter 56 cm') + line(d.wl, d.wr, -14, 'Taille 112 cm');
   }
 
-  // Hero-Bild: leichte Parallaxe, Laufband zieht beim Scrollen an
+  // Hero-Bild: leichte Parallaxe (Bemaßung wandert mit), Laufband zieht beim Scrollen an
   const heroImg = $('.hero__img img');
   const marquee = $('.marquee__track');
   if (!reduced && (heroImg || marquee)) {
@@ -63,7 +63,12 @@ function home(ctx) {
     const tick = (t) => {
       const y = window.scrollY;
       speed += (Math.abs(y - lastY) - speed) * 0.12; lastY = y;
-      if (heroImg && y < window.innerHeight * 1.2) heroImg.style.translate = `0 ${y * 0.06}px`;
+      if (heroImg && y < window.innerHeight * 1.2) {
+        // höchstens so weit, wie das auf 106 % skalierte Bild oben übersteht
+        const shift = `0 ${Math.min(y * 0.06, heroImg.offsetHeight * 0.03)}px`;
+        heroImg.style.translate = shift;
+        if (dims) dims.style.translate = shift;
+      }
       if (marquee) {
         const dt = Math.min(64, t - lastT); lastT = t;
         offset = (offset + dt * (0.045 + speed * 0.02)) % (marquee.scrollWidth / 2);
@@ -261,7 +266,7 @@ function product(ctx) {
 
   root.innerHTML = `
     <div class="pdp__gallery" id="gallery">
-      ${p.img.map((n, i) => `<figure tabindex="0" aria-label="Bild vergrößern"><img src="${imgSrc(n)}" width="1000" height="1250" alt="${i === 0 ? `${p.name} in ${p.color}, Vorderansicht` : `${p.name} in ${p.color}, Dreiviertelansicht`}" ${i ? 'loading="lazy"' : 'fetchpriority="high"'} /></figure>`).join('')}
+      ${p.img.map((n, i) => `<figure tabindex="0" aria-label="Bild vergrößern"><img src="${imgSrc(n)}" width="1000" height="1250" alt="${i === 0 ? `${p.name} in ${p.color}, getragen von einem breit gebauten Mann` : `${p.name} in ${p.color}, zweite Ansicht`}" ${i ? 'loading="lazy"' : 'fetchpriority="high"'} /></figure>`).join('')}
     </div>
     <div class="pdp__info">
       <div>
