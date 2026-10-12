@@ -10,7 +10,8 @@ import os
 import sys
 import urllib.request
 
-from PIL import Image
+import numpy as np
+from PIL import Image, ImageEnhance
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, 'cache')
@@ -73,6 +74,19 @@ CROPS = {
 }
 
 
+def grade(im, seed):
+    """Gemeinsamer Look für Fotos aus verschiedenen Quellen: etwas weniger Sättigung und Kontrast,
+    angehobene Schatten, leicht warm (passend zum Knochenton der Seite), feines Korn."""
+    im = ImageEnhance.Color(im).enhance(0.86)
+    im = ImageEnhance.Contrast(im).enhance(0.94)
+    a = np.asarray(im).astype(np.float32) / 255
+    a = 0.045 + a * 0.91
+    a[..., 0] *= 1.025
+    a[..., 2] *= 0.965
+    a += np.random.default_rng(seed).normal(0, 0.009, a.shape[:2])[..., None]
+    return Image.fromarray((np.clip(a, 0, 1) * 255 + 0.5).astype(np.uint8))
+
+
 def source(pid):
     path = os.path.join(CACHE, f'{pid}.jpg')
     if not os.path.exists(path):
@@ -90,10 +104,13 @@ def build(name):
     h = round(w * ratio)
     assert x0 + w <= im.width and y0 + h <= im.height, f'{name}: Ausschnitt größer als das Foto'
     out = im.crop((x0, y0, x0 + w, y0 + h)).resize(size, Image.LANCZOS)
+    seed = sum(map(ord, name))
+    small = grade(out.resize((600, 750), Image.LANCZOS), seed)
+    out = grade(out, seed)
     out.save(os.path.join(OUT, f'{name}.webp'), 'WEBP', quality=78, method=6)
     # Produktbilder bekommen eine 600er-Variante für srcset
     if name not in ('hero', 'atelier') and not name.startswith('look-'):
-        out.resize((600, 750), Image.LANCZOS).save(os.path.join(OUT, f'{name}-sm.webp'), 'WEBP', quality=75, method=6)
+        small.save(os.path.join(OUT, f'{name}-sm.webp'), 'WEBP', quality=75, method=6)
     print(f'{name:20} ← Pexels {pid}, {PHOTOS[pid]}')
 
 

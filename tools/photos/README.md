@@ -4,7 +4,7 @@ Die Bilder in `assets/img/shop/` (außer `inhaber.webp`) sind Ausschnitte aus Fo
 Die [Pexels-Lizenz](https://www.pexels.com/license/) erlaubt die kostenlose Nutzung und Bearbeitung ohne Namensnennung; wir nennen die Fotografen trotzdem, im Footer jeder Seite und hier.
 Die Kleidung auf den Fotos ist nicht von BREIT. Ausgewählt wurde nach Schnitt und Farbe des jeweiligen Produkts.
 
-`build.py` lädt die Originale (2400 px breit) nach `cache/` (nicht versioniert), schneidet sie zu und schreibt WebP:
+`build.py` lädt die Originale (2400 px breit) nach `cache/` (nicht versioniert), schneidet sie zu, gleicht die Farben an (Funktion `grade`: weniger Sättigung und Kontrast, angehobene Schatten, leicht warm, feines Korn) und schreibt WebP:
 
 ```bash
 python3 tools/photos/build.py            # alle Bilder

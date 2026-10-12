@@ -22,7 +22,7 @@ Vorlage bleibt Outsource Consultants, Inc. (Awwwards Site of the Day, März 2026
 ## Marke
 
 - **Name als Typografie:** „BREIT" ist in Archivo bei 125 % Breite gesetzt. Die Wortmarke ist buchstäblich breit. Die Maßlinie darunter ist das Bildzeichen; im Favicon steht sie unter einem breiten B.
-- **Ton:** sachlich, selbstbewusst, mit einem trockenen Satz pro Abschnitt („Ein Sakko ohne Polster. Die Schultern bringen Sie mit.").
+- **Ton:** sachlich und konkret, mit Zahlen statt Pointen. Die erste Fassung hatte in jedem Abschnitt dieselbe Formel (Slogan-Überschrift mit kursivem Akzentwort, nummerierte Abschnitte, Antithesen wie „nicht X, sondern Y", ein Witz am Ende jedes Produkttexts). Das wirkte generiert und ist rausgeflogen. Kursiv bleibt nur im Hero („breite") und im „&" von „Dominik & Felix".
 - **Kernbegriff Drop:** Differenz zwischen Brust- und Taillenweite. Konfektion ≈ 8 cm, BREIT 16/22/28 cm (Athletic/Power/Titan). Er zieht sich durch Passform-Konfigurator, Größenberater, Produktseite und Maßtabelle.
 
 ## Bilder
@@ -33,6 +33,7 @@ Vorlage bleibt Outsource Consultants, Inc. (Awwwards Site of the Day, März 2026
 - **Auswahl:** zuerst Statur (breites Kreuz, schwere Arme, schmale Taille), dann Farbe und Schnitt des Produkts. Wo möglich stammen beide Bilder eines Produkts aus derselben Serie. Ein Model aus einer Serie von Jaime Blanchart trägt Atlas Kreide, Atlas Himmel, Forum und Cove, ein Model von Abhishek Shekhawat Capo und das Hero-Bild.
 - **Ehrlichkeit:** Die Kleidung auf den Fotos ist nicht von BREIT. Der Footer jeder Seite sagt das und nennt die Fotografen; die Tabelle mit allen Pexels-IDs steht in `tools/photos/README.md`.
 - **Kompromisse:** Riviera zeigt ein Leinenhemd mit Kentkragen statt Stehkragen, Cove einen Strick mit Zip-Kragen statt eines Strick-Polos, das Terra-Model ist schlanker gebaut als die übrigen. Bessere Treffer gab es in der Suche nicht.
+- **Einheitlicher Look:** Die Fotos stammen von neun Fotografen mit sehr unterschiedlicher Bearbeitung. `build.py` gleicht sie an: etwas weniger Sättigung und Kontrast, angehobene Schatten, leicht warm, feines Korn. Das nimmt vor allem den stark geglätteten Studiofotos den künstlichen Glanz.
 - **Zuschnitt:** `tools/photos/build.py` (4:5 bzw. 16:11 für `look-2`, WebP, Produktbilder zusätzlich 600 px für `srcset`). Das zweite Produktbild ist teils ein Detail (Atlas Kreide: Knopfleiste).
 - **Bemaßung im Hero:** Die Maßlinien liegen auf den Schulterpunkten des Sakkos und auf der Sakkokante in Knopfhöhe (`pages.js`, Konstante `d`). Die Schulterlinie sitzt unter den Schultern statt darüber, damit das Etikett nicht über dem Gesicht steht.
 - **OG-Bild:** Wortmarke links unverändert, rechts ein Ausschnitt aus dem Hero-Foto.

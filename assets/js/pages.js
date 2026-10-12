@@ -382,7 +382,7 @@ function cartPage(ctx) {
     const n = cart.count();
     $('#cartCountHead').textContent = `${n} ${n === 1 ? 'Artikel' : 'Artikel'}`;
     if (!lines.length) {
-      root.innerHTML = `<div class="cart-page__empty"><p class="h2">Noch <span class="serif">leer.</span></p><p class="lead">Ihr Warenkorb wartet auf etwas mit Schulterweite.</p><a class="btn" href="kollektion.html">Zur Kollektion ${ARROW}</a></div>`;
+      root.innerHTML = `<div class="cart-page__empty"><p class="h2">Ihr Warenkorb ist leer.</p><p class="lead">In der Kollektion finden Sie alle neun Teile.</p><a class="btn" href="kollektion.html">Zur Kollektion ${ARROW}</a></div>`;
       return;
     }
     const sub = cart.subtotal(), ship = shippingFor(sub), rest = Math.max(0, SHIPPING_FREE_FROM - sub);
